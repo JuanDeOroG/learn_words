@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: bitnami/mariadb:latest
+    container_name: mariadb
+    environment:
+      # - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_ROOT_PASSWORD=321321321
+      - MARIADB_USER=master
+      - MARIADB_PASSWORD=123123123
+      - MARIADB_DATABASE=learn_words
+    volumes:
+      - mariadb_data:/bitnami/mariadb
+    networks:
+      - laravel
+
+  laravel:
+    image: bitnami/laravel:11.4.0
+    container_name: laravel
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=mariadb
+      - DB_PORT=3306
+      - DB_USERNAME=master
+      - DB_DATABASE=learn_words
+    volumes:
+      - ./learn_words:/app
+    depends_on:
+      - mariadb
+    networks:
+      - laravel
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      - PMA_HOST=mariadb
+      - PMA_USER=master
+      - PMA_PASSWORD=123123123
+    ports:
+      - "8081:80"
+    depends_on:
+      - mariadb
+    networks:
+      - laravel
+
+volumes:
+  mariadb_data:
+
+networks:
+  laravel:
+    driver: bridge
