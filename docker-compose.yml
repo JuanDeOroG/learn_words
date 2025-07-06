@@ -5,7 +5,6 @@ services:
     image: bitnami/mariadb:latest
     container_name: mariadb
     environment:
-      # - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_ROOT_PASSWORD=321321321
       - MARIADB_USER=master
       - MARIADB_PASSWORD=123123123
