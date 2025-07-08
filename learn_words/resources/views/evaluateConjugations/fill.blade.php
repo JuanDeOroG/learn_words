@@ -43,10 +43,11 @@
             </table>
         </div>
         <div class="fill-actions">
-            <button type="submit" class="btn-primary">Comprobar</button>
+            <button type="submit" class="btn-primary">Check</button>
             <a href="{{ route('evaluateConjugations.fill') }}" class="btn-secondary" style="display:none;" id="next-btn">Siguiente</a>
         </div>
         <div id="feedback-message"></div>
+        <x-loading id="fill-loading" />
     </form>
 </div>
 @endsection
@@ -57,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('fill-form');
     const nextBtn = document.getElementById('next-btn');
     const feedbackDiv = document.getElementById('feedback-message');
+    const loading = document.getElementById('fill-loading');
     if (!form) return;
 
     form.addEventListener('submit', function(e) {
@@ -69,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         if (nextBtn) nextBtn.style.display = 'none';
         if (feedbackDiv) feedbackDiv.innerHTML = '';
+        if (loading) loading.style.display = 'flex';
 
         const formData = new FormData(form);
 
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(res => res.json())
         .then(data => {
+            if (loading) loading.style.display = 'none';
             // Marcar inputs según feedback
             Object.entries(data.feedback).forEach(([conj, info]) => {
                 const input = form.querySelector(`[name="answers[${conj}]"]`);
@@ -100,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (feedbackDiv) feedbackDiv.innerHTML = '<span style="color:#1976d2;font-weight:bold;">¡Todo correcto! Puedes avanzar.</span>';
                 if (nextBtn) nextBtn.style.display = 'inline-block';
             }
+        })
+        .catch(() => {
+            if (loading) loading.style.display = 'none';
         });
     });
 });

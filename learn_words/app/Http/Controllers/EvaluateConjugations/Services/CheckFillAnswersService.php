@@ -7,7 +7,7 @@ class CheckFillAnswersService
 {
     public function check($groupKey, $answers)
     {
-        // Obtener las formas correctas de la palabra
+        // Get The correct forms of the words
         $forms = Word::where('group_key', $groupKey)
             ->with('conjugation')
             ->get()

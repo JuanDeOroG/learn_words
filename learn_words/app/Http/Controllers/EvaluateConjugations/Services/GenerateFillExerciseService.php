@@ -10,7 +10,7 @@ class GenerateFillExerciseService
 {
     public function generateFill($columns, $toFill, $wordsCount)
     {
-        // 1. Selecciona un grupo aleatorio de palabras (un verbo)
+        // 1. Select a random group of words (a verb)
         $group = Word::inRandomOrder()->first();
         if (!$group) {
             return [
@@ -23,25 +23,22 @@ class GenerateFillExerciseService
 
         $groupKey = $group->group_key;
 
-        // 2. Obtiene todas las formas de ese verbo
+        // 2. Get all forms of that verb
         $forms = Word::where('group_key', $groupKey)
             ->with('conjugation')
             ->get()
             ->pluck('word', 'conjugation.name')
             ->toArray();
 
-        // dd($forms);
-
-        // 3. Obtiene sólo las conjugaciones presentes en el grupo seleccionado
+        // 3. Get only the conjugations present in the selected group
         $allConjugations = array_keys($forms);
 
-        // 4. Selecciona columnas a mostrar (aleatorio o todas si hay menos)
+        // 4. Select columns to display (random or all if fewer available)
         $columns = Arr::random($allConjugations, min($columns, count($allConjugations)));
 
-        // 5. Selecciona cuáles campos serán para llenar (aleatorio)
+        // 5. Select which fields will be for filling in (random)
         $toFill = Arr::random($columns, min($toFill, count($columns)));
 
-        // 6. Prepara el array para la vista
         return [
             'columns' => $columns,
             'wordForms' => $forms,
