@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="card-container">
-        <div class="card" onclick="location.href='{{ url('/study') }}'">
+        <div class="card" onclick="location.href='{{route('study.index')}}'">
             <h2>Study Words</h2>
             <p>Access a variety of words to study and practice.</p>
         </div>
-        <div class="card" onclick="location.href='{{ url('/evaluateConjugations') }}'">
+        <div class="card" onclick="location.href='{{ route('evaluateConjugations.index') }}">
             <h2>Evaluate Conjugations</h2>
             <p>Test your knowledge and see how much you've learned.</p>
         </div>
