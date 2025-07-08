@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- <div class="card-container">
+    <div class="card-container">
         <div class="card" onclick="location.href='{{ url('/study') }}'">
             <h2>Study Words</h2>
             <p>Access a variety of words to study and practice.</p>
         </div>
-        <div class="card" onclick="location.href='{{ url('/evaluate') }}'">
-            <h2>Evaluate Words</h2>
+        <div class="card" onclick="location.href='{{ url('/evaluateConjugations') }}'">
+            <h2>Evaluate Conjugations</h2>
             <p>Test your knowledge and see how much you've learned.</p>
         </div>
         <div class="card" onclick="location.href='{{ url('/groups') }}'">
@@ -18,5 +18,5 @@
             <h2>Settings</h2>
             <p>Customize your learning experience and preferences.</p>
         </div>
-    </div> --}}
+    </div>
 @endsection

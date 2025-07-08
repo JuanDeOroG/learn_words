@@ -18,20 +18,22 @@ return new class extends Migration
         });
 
         $conjugations = [
-            'Base Form',
-            'Past',
-            'Past Participle',
-            'Present Participle',
-            'Future',
-            'Present Perfect',
-            'Past Perfect',
-            'Future Perfect',
+            1 => 'Base Form',
+            2 => 'Past',
+            3 => 'Past Participle',
+            4 => 'Present Participle',
+            5 => 'Future',
+            6 => 'Present Perfect',
+            7 => 'Past Perfect',
+            8 => 'Future Perfect',
         ];
 
-        foreach ($conjugations as $name) {
-            Conjugation::create(['name' => $name]);
+        foreach ($conjugations as $id => $name) {
+            Conjugation::updateOrCreate(
+                ['id' => $id],
+                ['name' => $name]
+            );
         }
-
     }
 
     /**
