@@ -13,11 +13,25 @@ return new class extends Migration
     {
         Schema::create('word_collections', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('collection_id')->constrained()->onDelete('cascade');
-            $table->foreignId('word_id')->constrained()->onDelete('cascade');
+
+            $table->integer('collection_id');
+            $table->integer('word_id');
+
             $table->timestamps();
 
-            $table->unique(['collection_id', 'word_id']);
+            // These field combinations must be unique
+            $table->unique(['collection_id', 'word_id'], 'uq_collection_word');
+
+            $table->foreign(['collection_id'], 'fk_collection_id')
+                ->references('id')->on('collections')
+                ->onUpdate('restrict')
+                ->onDelete('cascade');
+
+            $table->foreign(['word_id'], 'fk_word_id')
+                ->references('id')->on('words')
+                ->onUpdate('restrict')
+                ->onDelete('cascade');
+
         });
     }
 
@@ -26,6 +40,10 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('collection_word');
+        Schema::table('word_collections', function (Blueprint $table) {
+            $table->dropForeign('fk_collection_id');
+            $table->dropForeign('fk_word_id');
+        });
+        Schema::dropIfExists('word_collections');
     }
 };
