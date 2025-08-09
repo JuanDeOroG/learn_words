@@ -6,13 +6,23 @@ use App\Models\Word;
 use App\Models\Conjugation;
 use Illuminate\Support\Arr;
 
+use function Laravel\Prompts\form;
+
 class GenerateFillExerciseService
 {
-    public function generateFill($columns, $toFill, $wordsCount)
+    public function generateFill($columns, $toFill, $conjugationSelected = [])
     {
-        // 1. Select a random group of words (a verb)
-        $group = Word::inRandomOrder()->first();
-        if (!$group) {
+        // obtener un grupo de palabras
+        if (empty($conjugationSelected)) {
+            // if no conjugations are selected, get a random word group
+            $wordGroup = Word::inRandomOrder()->first();
+        } else {
+            // if conjugations are selected, get a random word group with those conjugations
+            $wordGroup = Word::whereIn('conjugation_id', $conjugationSelected)->inRandomOrder()->first();
+            // dd($wordGroup);
+        }
+
+        if (!$wordGroup) {
             return [
                 'columns' => [],
                 'wordForms' => [],
@@ -21,27 +31,32 @@ class GenerateFillExerciseService
             ];
         }
 
-        $groupKey = $group->group_key;
+        $groupKey = $wordGroup->group_key;
 
-        // 2. Get all forms of that verb
+        // traer todas las formas de ese verbo
         $forms = Word::where('group_key', $groupKey)
             ->with('conjugation')
-            ->get()
-            ->pluck('word', 'conjugation.name')
-            ->toArray();
+            ->get();
 
-        // 3. Get only the conjugations present in the selected group
-        $allConjugations = array_keys($forms);
+        // dd($forms);
+        //  objener todas las conjugaciones de esa palabra registradas
+        $allConjugations = array_keys($forms->pluck('word', 'conjugation.name')->toArray());
+        // dd($allConjugations);
 
-        // 4. Select columns to display (random or all if fewer available)
+        // seleccionar las conjugaciones (columnas) que se mostrarán, de forma aleatoria, limitado por el número de columnas solicitado por el usuario
         $columns = Arr::random($allConjugations, min($columns, count($allConjugations)));
 
-        // 5. Select which fields will be for filling in (random)
-        $toFill = Arr::random($columns, min($toFill, count($columns)));
-
+        // definir qué campos serán para llenar
+        if (!empty($conjugationSelected)) {
+            $toFill = $forms->whereIn('conjugation.id', $conjugationSelected)->pluck('conjugation.name')->toArray();
+        } else {
+            // si el usuario no seleccionó conjugaciones específicas, seleccionar aleatoriamente los campos a llenar
+            $toFill = Arr::random($columns, min($toFill, count($columns)));
+        }
+        // dd($toFill); 
         return [
             'columns' => $columns,
-            'wordForms' => $forms,
+            'wordForms' => $forms->pluck('word', 'conjugation.name')->toArray(),
             'toFill' => $toFill,
             'groupKey' => $groupKey,
         ];

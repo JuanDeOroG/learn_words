@@ -6,8 +6,8 @@
             <h2>Study Words</h2>
             <p>Access a variety of words to study and practice.</p>
         </div>
-        <div class="card" onclick="location.href='{{ route('evaluateConjugations.index') }}">
-            <h2>Evaluate Conjugations</h2>
+        <div class="card" onclick="location.href='{{ route('evaluate.index') }}'">
+            <h2>Evaluate</h2>
             <p>Test your knowledge and see how much you've learned.</p>
         </div>
         <div class="card" onclick="location.href='{{ url('/groups') }}'">

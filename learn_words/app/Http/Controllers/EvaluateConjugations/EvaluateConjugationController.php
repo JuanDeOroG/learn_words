@@ -12,15 +12,16 @@ class EvaluateConjugationController extends Controller
     public function fill(EvaluateFillRequest $request)
     {
         // Obtener preferencias del usuario desde el request (o usar valores por defecto)
-        $columns = $request->input('columns', 5);
-        $toFill = $request->input('to_fill', 2);
-        $wordsCount = $request->input('words_count', 1);
-
+        $columns = $request->input('columns', 4);
+        $toFill = $request->input('to_fill', 1);
+        // $wordsCount = $request->input('words_count', 1);
+        $conjugationSelected = $request->input('conjugations');
         // Lógica principal delegada al servicio
-        $exercise = (new GenerateFillExerciseService)->generateFill($columns, $toFill, $wordsCount);
+        $exercise = (new GenerateFillExerciseService)->generateFill($columns, $toFill, $conjugationSelected);
 
+        //dd($exercise);
         // Renderizar la vista con los datos generados
-        return view('evaluateConjugations.fill', [
+        return view('evaluate.conjugations.fill', [
             'columns' => $exercise['columns'],
             'wordForms' => $exercise['wordForms'],
             'toFill' => $exercise['toFill'],

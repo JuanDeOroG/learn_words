@@ -2,13 +2,13 @@
 @extends('layouts.app')
 
 @section('head')
-    <link rel="stylesheet" href="{{asset('css/evaluateConjugations/fill.css')}}">
+    <link rel="stylesheet" href="{{asset('css/EvaluateConjugations/fill.css')}}">
 @endsection
 
 @section('content')
 <div class="fill-eval-container">
     <h2>Completa las formas verbales</h2>
-    <form method="POST" action="{{ route('evaluateConjugations.fill.check') }}" autocomplete="off" id="fill-form">
+    <form method="POST" action="{{ route('evaluate.fillConjugations.check') }}" autocomplete="off" id="fill-form">
         @csrf
         <input type="hidden" name="group_key" value="{{ $groupKey }}">
         <div class="table-responsive">
@@ -44,7 +44,7 @@
         </div>
         <div class="fill-actions">
             <button type="submit" class="btn-primary">Check</button>
-            <a href="{{ route('evaluateConjugations.fill') }}" class="btn-secondary" style="display:none;" id="next-btn">Siguiente</a>
+            <a href="{{ route('evaluate.fillConjugations') }}" class="btn-secondary" style="display:none;" id="next-btn">Siguiente</a>
         </div>
         <div id="feedback-message"></div>
         <x-loading id="fill-loading" />
