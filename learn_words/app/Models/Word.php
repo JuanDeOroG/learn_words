@@ -22,4 +22,29 @@ class Word extends Model
     {
         return $this->belongsTo(Conjugation::class);
     }
+
+    /**
+     * Relación muchos a muchos con Collection a través de la tabla word_collections.
+     */
+    public function collections()
+    {
+        return $this->belongsToMany(Collection::class, 'word_collections', 'word_id', 'collection_id')
+            ->withTimestamps();
+    }
+
+    /**
+     * Filtra palabras por colecciones seleccionadas.
+     * @param array $collectionIds
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public static function filterByCollections(array $collectionIds)
+    {
+        $query = self::query();
+        if (!empty($collectionIds)) {
+            $query->whereHas('collections', function ($q) use ($collectionIds) {
+                $q->whereIn('collections.id', $collectionIds);
+            });
+        }
+        return $query;
+    }
 }

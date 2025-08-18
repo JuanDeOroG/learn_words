@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\EvaluateConjugations\EvaluateConjugationController;
+use App\Http\Controllers\Study\StudyController;
+use App\Models\Collection;
 use App\Models\Conjugation;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +28,11 @@ Route::prefix('evaluate')->group(function () {
 });
 
 Route::prefix('study')->group(function () {
-    Route::get('/', function () {
-        return view('study.index');
-    })->name('study.index');
+    
+    Route::get('/', function () {return view('study.index', ['collections'=>Collection::all()]);})->name('study.index');
+    Route::get('/session', [StudyController::class, 'study'])->name('study.session');
+
+
+
+
 });

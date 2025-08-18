@@ -1,0 +1,22 @@
+body {
+  margin: 0 !important;
+  font-family: 'Fredoka', sans-serif !important;
+  background-color: #f9f9f9 !important;
+  color: var(--text-color) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.wrapper {
+  text-align: initial !important;
+  padding: 0 !important;
+}
+
+/* Solo estilos específicos, sin afectar body ni wrapper globalmente */
+header, footer {
+  text-align: center !important;
+}

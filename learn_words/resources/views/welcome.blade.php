@@ -3,8 +3,8 @@
 @section('content')
     <div class="card-container">
         <div class="card" onclick="location.href='{{route('study.index')}}'">
-            <h2>Study Words</h2>
-            <p>Access a variety of words to study and practice.</p>
+            <h2>Study</h2>
+            <p>Access a variety of words to study.</p>
         </div>
         <div class="card" onclick="location.href='{{ route('evaluate.index') }}'">
             <h2>Evaluate</h2>

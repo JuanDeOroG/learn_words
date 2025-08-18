@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('word', 100);
             $table->integer('conjugation_id')->index('fk_conjugation_id');
             $table->string('group_key', 50)->index('idx_group_key');
+            $table->integer('study_count')->default(0); // contador de veces estudiada
             $table->timestamps();
 
 
