@@ -40,10 +40,14 @@ class StudyConfigurationService
         // aplicar cantidad de palabras solo si el objetivo es por cantidad
         if (($config['goal_type'] ?? '') === 'quantity' && !empty($config['words_count'])) {
             $wordsQuery->limit((int)$config['words_count']);
+        }else if (($config['goal_type'] ?? '') === 'no') {
+            // si el objetivo es 'no', limitar a 100 palabras
+            $wordsQuery->limit(100);
         }
+        
         $words = $wordsQuery->get();
 
-        // definir el objetivo de la sesión de estudio
+        // definir el valor del objetivo de la sesión de estudio
         $goalType = $config['goal_type'] ?? null;
         $goalValue = null;
 

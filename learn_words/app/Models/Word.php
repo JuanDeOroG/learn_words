@@ -47,4 +47,13 @@ class Word extends Model
         }
         return $query;
     }
+
+    /**
+     * Incrementa el contador de estudio de la palabra en +1.
+     */
+    public function incrementStudyCount()
+    {
+        $this->study_count = ($this->study_count ?? 0) + 1;
+        return $this->save();
+    }
 }

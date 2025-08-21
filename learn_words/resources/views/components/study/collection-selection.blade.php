@@ -8,8 +8,8 @@
                 <!-- se ha eliminado el botón de cerrar (equis) -->
             </div>
             <div class="modal-body" style="max-height: 350px; overflow-y: auto;">
-                <input type="text" class="form-control mb-2" placeholder="Search Collections..." id="search-collection"
-                    onkeyup="filterCollections()">
+                <input type="text" class="form-control mb-2" placeholder="Search Collections..."
+                    id="search-collection" onkeyup="filterCollections()">
                 <div id="collection-error" class="text-danger mb-2" style="display:none;"></div>
                 <div id="collections-list" class="border rounded p-2" style="max-height: 200px; overflow-y: auto;">
                     @foreach ($collections as $collection)
@@ -31,21 +31,38 @@
 </div>
 
 @section('scripts')
-<script>
-    // validate that at least one checkbox is selected before closing the modal
-    function validateCollections() {
-        const checks = document.querySelectorAll('#collections-list input[type="checkbox"]');
-        let checked = Array.from(checks).some(c => c.checked);
-        const errorDiv = document.getElementById('collection-error');
-        if (!checked) {
-            errorDiv.textContent = 'Please select at least one collection.';
-            errorDiv.style.display = 'block';
-            return;
+    <script>
+        // validate that at least one checkbox is selected before closing the modal
+        function validateCollections() {
+            const checks = document.querySelectorAll('#collections-list input[type="checkbox"]');
+            let checked = Array.from(checks).some(c => c.checked);
+            const errorDiv = document.getElementById('collection-error');
+            if (!checked) {
+                errorDiv.textContent = 'Please select at least one collection.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+            errorDiv.style.display = 'none';
+            // close the modal if at least one is selected
+            let modal = bootstrap.Modal.getInstance(document.getElementById('chooseCollectionModal'));
+            modal.hide();
         }
-        errorDiv.style.display = 'none';
-        // close the modal if at least one is selected
-        let modal = bootstrap.Modal.getInstance(document.getElementById('chooseCollectionModal'));
-        modal.hide();
-    }
-</script>
+
+
+        // filtrar colecciones por nombre
+        function filterCollections() {
+            let input = document.getElementById('search-collection').value.toLowerCase();
+            let checks = document.querySelectorAll('#collections-list .form-check');
+            checks.forEach(function(check) {
+                let checkbox = check.querySelector('input[type="checkbox"]');
+                let label = check.textContent.toLowerCase();
+                // si está seleccionada, siempre mostrar
+                if (checkbox.checked) {
+                    check.style.display = '';
+                } else {
+                    check.style.display = label.includes(input) ? '' : 'none';
+                }
+            });
+        }
+    </script>
 @endsection

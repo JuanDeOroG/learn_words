@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Study\Services\StudyConfigurationService;
 use App\Http\Requests\Study\StudyConfigRequest;
+use App\Models\Word;
 
 class StudyController extends Controller
 {
@@ -29,5 +30,25 @@ class StudyController extends Controller
             'collections' => $studyData['collections'],
             // puedes agregar más datos según lo que devuelva el servicio
         ]);
+    }
+
+    /**
+     * Marca una palabra como estudiada.
+     */
+    public function incrementStudyCount(Request $request)
+    {
+        $request->validate([
+            'word_id' => 'required|exists:words,id',
+        ]);
+
+        $word = Word::find($request->word_id);
+        $word->incrementStudyCount();
+
+
+        if ($request->ajax()) {
+            return response()->json(['success' => true, 'message' => 'Word marked as studied.']);
+        }
+
+        return redirect()->back()->with('success', 'Word marked as studied.');
     }
 }

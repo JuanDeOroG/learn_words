@@ -31,7 +31,7 @@ Route::prefix('study')->group(function () {
     
     Route::get('/', function () {return view('study.index', ['collections'=>Collection::all()]);})->name('study.index');
     Route::get('/session', [StudyController::class, 'study'])->name('study.session');
-
+    Route::post('/incrementStudyCount', [StudyController::class, 'incrementStudyCount'])->name('study.incrementStudyCount');
 
 
 
