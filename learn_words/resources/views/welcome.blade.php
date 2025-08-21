@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app', ['hideBackButton' => true])
 
 @section('content')
     <div class="card-container">

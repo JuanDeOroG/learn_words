@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Study\Services;
 
 use App\Models\Word;
 use App\Models\Collection;
+use App\Services\UnsplashService;
 
 class StudyConfigurationService
 {
@@ -40,13 +41,17 @@ class StudyConfigurationService
         // aplicar cantidad de palabras solo si el objetivo es por cantidad
         if (($config['goal_type'] ?? '') === 'quantity' && !empty($config['words_count'])) {
             $wordsQuery->limit((int)$config['words_count']);
-        }else if (($config['goal_type'] ?? '') === 'no') {
+        } else if (($config['goal_type'] ?? '') === 'no') {
             // si el objetivo es 'no', limitar a 100 palabras
-            $wordsQuery->limit(100);
+            $wordsQuery->limit(2);
         }
-        
-        $words = $wordsQuery->get();
 
+        $words = $wordsQuery->get();
+        $unsplash = new UnsplashService();
+
+        foreach ($words as $word) {
+            $word->image_url = $unsplash->searchImage($word->word);
+        }
         // definir el valor del objetivo de la sesión de estudio
         $goalType = $config['goal_type'] ?? null;
         $goalValue = null;

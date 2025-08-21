@@ -51,7 +51,7 @@
                     <div class="card shadow" style="max-width: 500px; min-width: 350px; min-height: 420px;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center">
                             <h4 class="card-title mb-3">${word.word}</h4>
-                            <img src="${imageUrl}" alt="Image" class="img-fluid mb-3" style="max-width:320px; max-height:180px;">
+                            <img src="${ word.image_url }" alt="Image" class="img-fluid mb-3" style="max-width:320px; max-height:180px;">
                             <button class="btn btn-outline-primary mb-2" id="speakWordBtn">🔊 Pronounce</button>
                             <p class="card-text mb-2"><em>${word.example ?? 'No example available.'}</em></p>
                             ${word.translation ? `<p class="text-muted mb-2">Translation: ${word.translation}</p>` : ''}
