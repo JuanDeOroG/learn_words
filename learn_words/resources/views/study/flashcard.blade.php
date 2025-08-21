@@ -16,7 +16,6 @@
         @if ($mode === 'flashcard')
             const words = @json($words);
             let current = 0;
-            // array para saber si ya se incrementó el contador de cada palabra
             let studied = Array(words.length).fill(false);
 
             async function incrementStudyCount(wordId) {
@@ -34,16 +33,26 @@
                 }
             }
 
+            function speakWord(text) {
+                if ('speechSynthesis' in window) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = 'en-US'; // puedes cambiar el idioma
+                    utterance.rate = 0.7; // velocidad (1 es normal, <1 más lento, >1 más rápido)
+                    window.speechSynthesis.speak(utterance);
+                } else {
+                    alert('Speech Synthesis not supported in this browser.');
+                }
+            }
+
             function renderWord(idx) {
                 const word = words[idx];
+                let imageUrl = `https://source.unsplash.com/320x180/?${encodeURIComponent(word.word)}`;
                 let html = `
                     <div class="card shadow" style="max-width: 500px; min-width: 350px; min-height: 420px;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center">
                             <h4 class="card-title mb-3">${word.word}</h4>
-                            <img src="https://source.unsplash.com/320x180/?${encodeURIComponent(word.word)}" alt="Image" class="img-fluid mb-3" style="max-width:320px; max-height:180px;">
-                            <audio controls class="mb-3" style="width:220px;">
-                                <source src="${word.audio_url ?? '#'}" type="audio/mpeg">
-                            </audio>
+                            <img src="${imageUrl}" alt="Image" class="img-fluid mb-3" style="max-width:320px; max-height:180px;">
+                            <button class="btn btn-outline-primary mb-2" id="speakWordBtn">🔊 Pronounce</button>
                             <p class="card-text mb-2"><em>${word.example ?? 'No example available.'}</em></p>
                             ${word.translation ? `<p class="text-muted mb-2">Translation: ${word.translation}</p>` : ''}
                             ${word.conjugation ? `<div class="mt-2"><strong>Conjugation:</strong> <span class="badge bg-info">${word.conjugation.name}</span></div>` : ''}
@@ -55,6 +64,11 @@
                 document.getElementById('prevWord').disabled = idx === 0;
                 document.getElementById('nextWord').disabled = idx === words.length - 1;
                 document.getElementById('evaluateBtn').style.display = (idx === words.length - 1) ? '' : 'none';
+
+                // añadir evento al botón de pronunciar
+                document.getElementById('speakWordBtn').onclick = function() {
+                    speakWord(word.word);
+                };
             }
 
             document.getElementById('prevWord').onclick = function() {
@@ -65,7 +79,6 @@
             };
 
             document.getElementById('nextWord').onclick = async function() {
-                // sólo incrementar si no se ha incrementado antes para esta palabra
                 if (!studied[current]) {
                     await incrementStudyCount(words[current].id);
                     studied[current] = true;
