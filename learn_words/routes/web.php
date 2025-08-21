@@ -36,3 +36,29 @@ Route::prefix('study')->group(function () {
 
 
 });
+
+Route::prefix('collections')->group(function () {
+    Route::get('/', function () {
+        return view('collections.index');
+    })->name('collections.index');
+
+    Route::get('/create', function () {
+        return view('collections.create');
+    })->name('collections.create');
+
+    Route::get('/import', function () {
+        return view('collections.import');
+    })->name('collections.import');
+
+    Route::get('/manage', function () {
+        return view('collections.manage', [
+            'collections' => \App\Models\Collection::all()
+        ]);
+    })->name('collections.manage');
+
+    Route::get('/stats', function () {
+        return view('collections.stats', [
+            'collections' => \App\Models\Collection::all()
+        ]);
+    })->name('collections.stats');
+});

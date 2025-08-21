@@ -10,9 +10,9 @@
             <h2>Evaluate</h2>
             <p>Test your knowledge and see how much you've learned.</p>
         </div>
-        <div class="card" onclick="location.href='{{ url('/groups') }}'">
-            <h2>Word Groups</h2>
-            <p>Explore different groups of words for targeted learning.</p>
+        <div class="card" onclick="location.href='{{ route('collections.index') }}'">
+            <h2>Word Collections</h2>
+            <p>Explore different collections for targeted learning.</p>
         </div>
         <div class="card" onclick="location.href='{{ url('/settings') }}'">
             <h2>Settings</h2>
