@@ -3,12 +3,12 @@
 
 @section('content')
 <div class="card-container">
-    <div class="card collection-card" onclick="location.href='{{ route('collections.create') }}'">
+    <div class="card collection-card" data-bs-toggle="modal" data-bs-target="#createCollectionModal">
         <div class="collection-icon">
             <i class="bx bx-plus-circle" style="font-size:2.5rem;color:#1976d2;"></i>
         </div>
         <h2>Create Collection</h2>
-        <p>Add a new collection or import one to organize your words.</p>
+        <p>Add a new collection to organize your words.</p>
     </div>
     <div class="card collection-card" onclick="location.href='{{ route('collections.manage') }}'">
         <div class="collection-icon">
@@ -32,4 +32,6 @@
         <p>View statistics about your collections and words.</p>
     </div>
 </div>
+
+@include('components.wordcollection.create')
 @endsection

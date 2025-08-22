@@ -46,7 +46,6 @@
 
             function renderWord(idx) {
                 const word = words[idx];
-                let imageUrl = `https://source.unsplash.com/320x180/?${encodeURIComponent(word.word)}`;
                 let html = `
                     <div class="card shadow" style="max-width: 500px; min-width: 350px; min-height: 420px;">
                         <div class="card-body d-flex flex-column align-items-center justify-content-center">

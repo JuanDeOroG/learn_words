@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EvaluateConjugations\EvaluateConjugationController;
 use App\Http\Controllers\Study\StudyController;
+use App\Http\Controllers\WordCollection\WordCollectionController;
 use App\Models\Collection;
 use App\Models\Conjugation;
 use Illuminate\Routing\RouteGroup;
@@ -28,24 +29,23 @@ Route::prefix('evaluate')->group(function () {
 });
 
 Route::prefix('study')->group(function () {
-    
-    Route::get('/', function () {return view('study.index', ['collections'=>Collection::all()]);})->name('study.index');
+
+    Route::get('/', function () {
+        return view('study.index', ['collections' => Collection::all()]);
+    })->name('study.index');
     Route::get('/session', [StudyController::class, 'study'])->name('study.session');
     Route::post('/incrementStudyCount', [StudyController::class, 'incrementStudyCount'])->name('study.incrementStudyCount');
-
-
-
 });
 
-Route::prefix('collections')->group(function () {
+Route::prefix('wordCollection')->group(function () {
+    
     Route::get('/', function () {
         return view('collections.index');
-    })->name('collections.index');
-
-    Route::get('/create', function () {
-        return view('collections.create');
-    })->name('collections.create');
-
+    })->name('wordCollection.index');
+    
+    Route::post('/store', [WordCollectionController::class, 'store'])->name('wordCollection.store');
+    
+    // ########################################################33
     Route::get('/import', function () {
         return view('collections.import');
     })->name('collections.import');
