@@ -82,7 +82,7 @@ h1 {
 
 footer {
   margin-top: auto;
-  padding: 10px;
+  padding: 0;
   background-color: var(--secondary-color);
   width: 100%;
   text-align: center;

@@ -44,17 +44,19 @@ Route::prefix('wordCollection')->group(function () {
     })->name('wordCollection.index');
     
     Route::post('/store', [WordCollectionController::class, 'store'])->name('wordCollection.store');
-    
+
+    Route::get('/edit', function () {
+        return view('collections.edit');
+    })->name('wordCollection.edit');
+
+    Route::post('/edit', [WordCollectionController::class, 'edit'])->name('wordCollection.edit');
+
     // ########################################################33
     Route::get('/import', function () {
         return view('collections.import');
     })->name('collections.import');
 
-    Route::get('/manage', function () {
-        return view('collections.manage', [
-            'collections' => \App\Models\Collection::all()
-        ]);
-    })->name('collections.manage');
+    
 
     Route::get('/stats', function () {
         return view('collections.stats', [

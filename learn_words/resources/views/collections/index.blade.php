@@ -10,14 +10,14 @@
         <h2>Create Collection</h2>
         <p>Add a new collection to organize your words.</p>
     </div>
-    <div class="card collection-card" onclick="location.href='{{ route('collections.manage') }}'">
+    <div class="card collection-card" onclick="location.href='{{ route('wordCollection.edit') }}'">
         <div class="collection-icon">
             <i class="bx bx-edit" style="font-size:2.5rem;color:#1976d2;"></i>
         </div>
-        <h2>Edit Collections</h2>
-        <p>Modify your existing collections.</p>
+        <h2>Edit Collections and Words</h2>
+        <p>Modify your existing collections and words.</p>
     </div>
-    <div class="card collection-card" onclick="location.href='{{ route('collections.manage') }}'">
+    <div class="card collection-card" onclick="location.href='{{ route('wordCollection.edit') }}'">
         <div class="collection-icon">
             <i class="bx bx-trash" style="font-size:2.5rem;color:#d32f2f;"></i>
         </div>
@@ -33,5 +33,5 @@
     </div>
 </div>
 
-@include('components.wordcollection.create')
+@include('components.wordcollection.create-modal')
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\WordCollection;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WordCollection\StoreCollectionRequest;
 use App\Http\Controllers\WordCollection\Services\CreateCollectionService;
+use App\Http\Controllers\WordCollection\Services\EditCollectionService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -24,5 +25,51 @@ class WordCollectionController extends Controller
         }
 
         return redirect()->route('wordCollection.index')->with('success', 'Collection created successfully.');
+    }
+
+    public function edit(Request $request)
+    {
+        // Servicio para editar y consultar colecciones/palabras
+        $service = new EditCollectionService();
+
+        // 1. Buscar colecciones (paginación y búsqueda)
+        if ($request->has('page') || $request->has('query')) {
+            $result = $service->searchCollections(
+                $request->input('query', ''),
+                $request->input('page', 1)
+            );
+            return response()->json($result);
+        }
+
+        // 2. Mostrar detalle de colección y palabras
+        if ($request->has('collection_id') && !$request->has('remove_word_id') && !$request->has('get_word') && !$request->has('update_word')) {
+            $result = $service->getCollectionDetail($request->input('collection_id'));
+            return response()->json($result);
+        }
+
+        // 3. Quitar palabra de la colección
+        if ($request->has('remove_word_id') && $request->has('collection_id')) {
+            $success = $service->removeWordFromCollection($request->input('collection_id'), $request->input('remove_word_id'));
+            return response()->json(['success' => $success]);
+        }
+
+        // 4. Obtener datos de una palabra
+        if ($request->has('get_word') && $request->has('word_id')) {
+            $word = $service->getWord($request->input('word_id'));
+            return response()->json(['word' => $word]);
+        }
+
+        // 5. Editar palabra
+        if ($request->has('update_word') && $request->has('word_id')) {
+            $success = $service->updateWord(
+                $request->input('word_id'),
+                $request->input('word'),
+                $request->input('translation')
+            );
+            return response()->json(['success' => $success]);
+        }
+
+        // Default: error
+        return response()->json(['error' => 'Invalid request'], 400);
     }
 }
