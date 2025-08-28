@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (result.success) {
                 addWordsBtn.classList.remove('d-none');
                 editCollectionBtn.classList.remove('d-none');
-                addWordsBtn.onclick = () => window.location.href = `/wordCollection/${result.collection.id}/words/add`;
-                editCollectionBtn.onclick = () => window.location.href = `/wordCollection/${result.collection.id}/edit`;
+                addWordsBtn.onclick = () => window.location.href = `{{route('wordCollection.add')}}?collection_id=${result.collection.id}`;
+                editCollectionBtn.onclick = () => window.location.href = `{{route('wordCollection.edit')}}?collection_id=${result.collection.id}`;
                 Swal.fire({
                     text: "Collection created successfully.",
                     icon: 'success',

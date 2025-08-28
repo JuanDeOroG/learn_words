@@ -8,7 +8,7 @@
             <!-- Icono lápiz -->
             <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><path fill="#4CAF50" d="M3 17.25V21h3.75l11.06-11.06-3.75-3.75L3 17.25zm14.71-9.04a1.003 1.003 0 0 0 0-1.42l-2.5-2.5a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
         </div>
-        <h2>Llenar campos</h2>
+        <h2>Fill Conjugations</h2>
         <p>Completa las formas que faltan.</p>
     </div>
     <div class="card eval-card" onclick="location.href='{{ url('/evaluate/order') }}'">

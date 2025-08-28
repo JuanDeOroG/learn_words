@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('words', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('word', 100);
-            $table->integer('conjugation_id')->index('fk_conjugation_id');
-            $table->string('group_key', 50)->index('idx_group_key');
+            $table->string('image_url')->nullable();
+            $table->integer('conjugation_id')->index('fk_conjugation_id')->nullable();
+            $table->string('group_key', 50)->index('idx_group_key')->nullable();
             $table->integer('study_count')->default(0); // contador de veces estudiada
             $table->timestamps();
 

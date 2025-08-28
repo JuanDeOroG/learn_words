@@ -8,6 +8,9 @@ use App\Http\Controllers\WordCollection\Services\CreateCollectionService;
 use App\Http\Controllers\WordCollection\Services\EditCollectionService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Http\Requests\WordCollection\AddWordToCollectionsRequest;
+use App\Http\Controllers\WordCollection\Services\AddWordToCollectionsService;
+use App\Models\Collection;
 
 class WordCollectionController extends Controller
 {
@@ -71,5 +74,20 @@ class WordCollectionController extends Controller
 
         // Default: error
         return response()->json(['error' => 'Invalid request'], 400);
+    }
+
+    public function add(Request $request)
+    {
+        $request->validate(['collection_id' => 'required|exists:collections,id']);
+        $collection = Collection::findOrFail($request->input('collection_id'));
+        $words = $collection->words()->get();
+
+        return view('collections.add', ['collection' => $collection,'words' => $words,]);
+    }
+    public function addWord(AddWordToCollectionsRequest $request)
+    {
+        $word = (new AddWordToCollectionsService())->add($request);
+
+        return response()->json(['success' => true, 'word' => $word]);
     }
 }

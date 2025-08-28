@@ -43,15 +43,17 @@ class StudyConfigurationService
             $wordsQuery->limit((int)$config['words_count']);
         } else if (($config['goal_type'] ?? '') === 'no') {
             // si el objetivo es 'no', limitar a 100 palabras
-            $wordsQuery->limit(2);
+            $wordsQuery->limit(10);
         }
 
         $words = $wordsQuery->get();
-        $unsplash = new UnsplashService();
+        // $unsplash = new UnsplashService();
 
-        foreach ($words as $word) {
-            $word->image_url = $unsplash->searchImage($word->word);
-        }
+        // foreach ($words as $word) {
+        //     if(!$word->image_url){
+        //         $word->image_url = "";//$unsplash->fetchImages($word->word);
+        //     }
+        // }
         // definir el valor del objetivo de la sesión de estudio
         $goalType = $config['goal_type'] ?? null;
         $goalValue = null;

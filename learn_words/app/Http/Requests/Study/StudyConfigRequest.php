@@ -24,7 +24,7 @@ class StudyConfigRequest extends FormRequest
         ];
 
         // si existe chooseCollectionOption, añadir validación de collections
-        if ($this->has('chooseCollectionOption')) {
+        if ($this->has('randomWordsOption') && $this->input('randomWordsOption') === 'no') {
             $rules['collections'] = 'required|array|min:1';
             $rules['collections.*'] = 'exists:collections,id';
         }

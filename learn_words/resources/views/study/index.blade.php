@@ -8,14 +8,14 @@
             {{-- selección de colecciones --}}
             <div class="mb-4">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="randomWordsOption" id="flexRadioDefault1" checked>
+                    <input class="form-check-input" type="radio" name="randomWordsOption" id="flexRadioDefault1" value="yes" checked>
                     <label class="form-check-label" for="flexRadioDefault1">
                         Random Words
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="chooseCollectionOption" data-bs-toggle="modal"
-                        data-bs-target="#chooseCollectionModal" id="chooseCollectionRadio">
+                    <input class="form-check-input" type="radio" name="randomWordsOption" data-bs-toggle="modal"
+                        data-bs-target="#chooseCollectionModal" id="chooseCollectionRadio" value="no">
                     <label class="form-check-label" data-bs-toggle="modal"
                         data-bs-target="#chooseCollectionModal" onclick="chooseCollectionChecked()">
                         Choose Collection(s)

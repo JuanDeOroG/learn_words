@@ -5,6 +5,7 @@ use App\Http\Controllers\Study\StudyController;
 use App\Http\Controllers\WordCollection\WordCollectionController;
 use App\Models\Collection;
 use App\Models\Conjugation;
+use App\Services\UnsplashService;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/searchImage', [UnsplashService::class, 'searchImage'])->name('searchImage');
 
 Route::prefix('evaluate')->group(function () {
 
@@ -50,6 +52,11 @@ Route::prefix('wordCollection')->group(function () {
     })->name('wordCollection.edit');
 
     Route::post('/edit', [WordCollectionController::class, 'edit'])->name('wordCollection.edit');
+
+    Route::get('/add', [WordCollectionController::class, 'add'])->name('wordCollection.add');
+    Route::post('/add', [WordCollectionController::class, 'addWord'])->name('wordCollection.addWord');
+
+
 
     // ########################################################33
     Route::get('/import', function () {

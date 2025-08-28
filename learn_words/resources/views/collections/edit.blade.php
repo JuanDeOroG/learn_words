@@ -110,16 +110,26 @@ function selectCollection(collectionId) {
                             <label class="form-label me-2 mb-0" style="min-width:100px;">Description</label>
                             <textarea class="form-control form-control-sm" id="editCollectionDescription" rows="1">${data.collection.description ?? ''}</textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm mt-2">Save Changes</button>
+                        <div class="row mt-2">
+                            <div class="col-12 pe-1">
+                                <button type="button" class="btn btn-dark btn-sm w-100">Save Changes</button>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </form>
         `;
         // Card inferior: palabras de la colección
+        // console.log(data);
         let wordsHtml = `
             <div class="card" style="width:100%; height:55vh; min-height:200px; overflow-y:auto;">
-                <div class="card-header">
-                    <strong>Words in this collection</strong>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <strong>Words in this collection (${data.words.length})</strong>
+                    <div class="d-flex" style="gap: 8px;">
+                        <a href="{{ route('wordCollection.add') }}?collection_id=${data.collection.id}" class="btn btn-dark btn-sm" id="addWordBtn">Add Word</a>
+                        <button type="button" class="btn btn-warning btn-sm" id="importWordBtn">Import</button>
+                    </div>
                 </div>
                 <ul class="list-group list-group-flush" id="wordsList">
         `;

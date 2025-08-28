@@ -13,6 +13,7 @@ class Word extends Model
         'word',
         'conjugation_id',
         'group_key',
+        'image_url',
     ];
 
     /**
