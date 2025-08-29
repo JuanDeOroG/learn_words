@@ -62,7 +62,16 @@ function loadCollections(page = 1, query = '') {
             const item = document.createElement('button');
             item.className = 'list-group-item list-group-item-action';
             item.textContent = collection.name;
-            item.onclick = () => selectCollection(collection.id);
+            item.onclick = () => {
+                // Si ya está seleccionada, no hacer nada
+                if (selectedCollectionId === collection.id) return;
+                selectCollection(collection.id);
+            };
+            // Si está seleccionada, deshabilitar el botón
+            if (selectedCollectionId === collection.id) {
+                item.disabled = true;
+                item.classList.add('active');
+            }
             document.getElementById('collectionsList').appendChild(item);
         });
         const loadMoreBtn = document.getElementById('loadMoreBtn');

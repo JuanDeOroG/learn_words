@@ -35,9 +35,9 @@ return new class extends Migration
 
         });
 
-        // Ejecutar un seeder de verbos irregulares
+        // Ejecutar seeder MyWordsSeeder
         Artisan::call('db:seed', [
-            '--class' => "Database\\Seeders\\collections\\IrregularVerbsSeeder",
+            '--class' => "Database\\Seeders\\collections\\MyWordsSeeder",
             '--force' => true, // Necesario en producción
         ]);
     }

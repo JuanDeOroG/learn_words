@@ -15,7 +15,7 @@ class AddWordToCollectionsRequest extends FormRequest
     {
         return [
             'word' => 'required|string|max:255',
-            // 'translation' => 'nullable|string|max:255',
+            'translation' => 'required|string|max:255',
             'image_url' => 'nullable|url',
             'collection_id' => 'required|integer|exists:collections,id',
         ];

@@ -63,7 +63,7 @@ class EditCollectionService
         $w = Word::find($wordId);
         if ($w) {
             $w->word = $word;
-            // $w->translation = $translation;
+            $w->translation = $translation;
             $w->save();
             return true;
         }

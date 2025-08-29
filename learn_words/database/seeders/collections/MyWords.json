@@ -1,0 +1,1450 @@
+[
+    {
+        "word": "town",
+        "translation": "pueblo",
+        "example": "I live in a small town.",
+        "ejemplo": "Vivo en un pueblo pequeño",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "nor",
+        "translation": "ni",
+        "example": "He doesn’t eat meat and nor does she.",
+        "ejemplo": "Él no come carne",
+        "pronuntiation": "ni ella",
+        "": ""
+    },
+    {
+        "word": "fat",
+        "translation": "gordo",
+        "example": "The cat is fat.",
+        "ejemplo": "El gato está gordo",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "shouts",
+        "translation": "grita",
+        "example": "She shouts when she's angry.",
+        "ejemplo": "Ella grita cuando está enojada",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "closest",
+        "translation": "más cercano",
+        "example": "This is the closest store.",
+        "ejemplo": "Esta es la tienda más cercana",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "run down",
+        "translation": "deteriorado",
+        "example": "That house is very run down.",
+        "ejemplo": "Esa casa está muy deteriorada",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "the pond",
+        "translation": "el estanque",
+        "example": "The ducks are swimming in the pond.",
+        "ejemplo": "Los patos nadan en el estanque",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "reach",
+        "translation": "alcanzar",
+        "example": "Can you reach the top shelf?",
+        "ejemplo": "¿Puedes alcanzar el estante de arriba?",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "goose",
+        "translation": "ganso",
+        "example": "A goose is bigger than a duck.",
+        "ejemplo": "Un ganso es más grande que un pato",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "poetry",
+        "translation": "poesía",
+        "example": "She loves reading poetry.",
+        "ejemplo": "A ella le encanta leer poesía",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "well then",
+        "translation": "bueno",
+        "example": "entonces",
+        "ejemplo": "Well then",
+        "pronuntiation": "let’s go!",
+        "": ""
+    },
+    {
+        "word": "through",
+        "translation": "a través de",
+        "example": "We walked through the forest.",
+        "ejemplo": "Caminamos a través del bosque",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "belly",
+        "translation": "barriga",
+        "example": "His belly is full.",
+        "ejemplo": "Su barriga está llena",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "thin",
+        "translation": "delgado",
+        "example": "She is very thin.",
+        "ejemplo": "Ella es muy delgada",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "toast",
+        "translation": "tostada",
+        "example": "I had toast for breakfast.",
+        "ejemplo": "Desayuné tostadas",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "buffer",
+        "translation": "amortiguador",
+        "example": "A buffer absorbs shock.",
+        "ejemplo": "Un amortiguador absorbe impactos",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "headline",
+        "translation": "titular",
+        "example": "That’s the main headline today.",
+        "ejemplo": "Ese es el titular principal de hoy",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "warn",
+        "translation": "advertir",
+        "example": "They warned us about the storm.",
+        "ejemplo": "Nos advirtieron sobre la tormenta",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "road",
+        "translation": "carretera",
+        "example": "The road is long and narrow.",
+        "ejemplo": "La carretera es larga y angosta",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "hen",
+        "translation": "gallina",
+        "example": "The hen laid an egg.",
+        "ejemplo": "La gallina puso un huevo",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "saw",
+        "translation": "vio / sierra",
+        "example": "I saw a bird. / Use the saw to cut wood.",
+        "ejemplo": "Vi un pájaro. / Usa la sierra para cortar",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "forward",
+        "translation": "hacia adelante",
+        "example": "Move forward slowly.",
+        "ejemplo": "Avanza lentamente",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "pigeon",
+        "translation": "paloma",
+        "example": "A pigeon flew onto the balcony.",
+        "ejemplo": "Una paloma voló al balcón",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "meet",
+        "translation": "encontrarse / conocer",
+        "example": "Let’s meet at the park.",
+        "ejemplo": "Encontrémonos en el parque",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "leads",
+        "translation": "conduce / lleva",
+        "example": "This road leads to the lake.",
+        "ejemplo": "Esta carretera lleva al lago",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "hill",
+        "translation": "colina",
+        "example": "The house is on a hill.",
+        "ejemplo": "La casa está en una colina",
+        "pronuntiation": "",
+        "": ""
+    },
+    {
+        "word": "Nationality",
+        "translation": "Nacionalidad",
+        "example": "What's your nationality?",
+        "ejemplo": "¿Cuál es tu nacionalidad?",
+        "pronuntiation": "nashionaliry",
+        "": ""
+    },
+    {
+        "word": "Birthplace",
+        "translation": "Lugar de nacimiento",
+        "example": "New York is my birthplace.",
+        "ejemplo": "Nueva York es mi lugar de nacimiento.",
+        "pronuntiation": "bérrzpleis",
+        "": ""
+    },
+    {
+        "word": "Hometown",
+        "translation": "Ciudad natal",
+        "example": "I’m visiting my hometown this weekend.",
+        "ejemplo": "Voy a visitar mi ciudad natal este fin de semana.",
+        "pronuntiation": "jóumtaun",
+        "": ""
+    },
+    {
+        "word": "Terrific",
+        "translation": "Genial / Excelente",
+        "example": "You did a terrific job!",
+        "ejemplo": "¡Hiciste un trabajo excelente!",
+        "pronuntiation": "terrífik",
+        "": ""
+    },
+    {
+        "word": "Terrible",
+        "translation": "Terrible / Horrible",
+        "example": "The weather was terrible yesterday.",
+        "ejemplo": "El clima estuvo horrible ayer.",
+        "pronuntiation": "térribol",
+        "": ""
+    },
+    {
+        "word": "Mostly",
+        "translation": "Mayormente",
+        "example": "We eat at home mostly.",
+        "ejemplo": "Mayormente comemos en casa.",
+        "pronuntiation": "móusli",
+        "": ""
+    },
+    {
+        "word": "Latest",
+        "translation": "Más reciente",
+        "example": "Have you seen the latest movie?",
+        "ejemplo": "¿Has visto la película más reciente?",
+        "pronuntiation": "léitest",
+        "": ""
+    },
+    {
+        "word": "Children",
+        "translation": "Niños",
+        "example": "The children are playing outside.",
+        "ejemplo": "Los niños están jugando afuera.",
+        "pronuntiation": "chíldren",
+        "": ""
+    },
+    {
+        "word": "Sibling",
+        "translation": "Hermano/a",
+        "example": "I have one sibling.",
+        "ejemplo": "Tengo un hermano (o hermana).",
+        "pronuntiation": "síbling",
+        "": ""
+    },
+    {
+        "word": "Spouse",
+        "translation": "Cónyuge",
+        "example": "Please bring your spouse to the party.",
+        "ejemplo": "Por favor trae a tu cónyuge a la fiesta.",
+        "pronuntiation": "spáus",
+        "": ""
+    },
+    {
+        "word": "Halfsister",
+        "translation": "Hermana de padre o madre",
+        "example": "My halfsister lives in Canada.",
+        "ejemplo": "Mi media hermana vive en Canadá.",
+        "pronuntiation": "jáfsíster",
+        "": ""
+    },
+    {
+        "word": "Stepsister",
+        "translation": "Hermanastra",
+        "example": "My stepsister is very nice.",
+        "ejemplo": "Mi hermanastra es muy amable.",
+        "pronuntiation": "stépsíster",
+        "": ""
+    },
+    {
+        "word": "Aunt",
+        "translation": "Tía",
+        "example": "My aunt makes the best cookies.",
+        "ejemplo": "Mi tía hace las mejores galletas.",
+        "pronuntiation": "ánt",
+        "": ""
+    },
+    {
+        "word": "Uncle",
+        "translation": "Tío",
+        "example": "My uncle is coming to dinner.",
+        "ejemplo": "Mi tío viene a cenar.",
+        "pronuntiation": "áncol",
+        "": ""
+    },
+    {
+        "word": "Father-in-law",
+        "translation": "Suegro",
+        "example": "My father-in-law is very kind.",
+        "ejemplo": "Mi suegro es muy amable.",
+        "pronuntiation": "fáder in ló",
+        "": ""
+    },
+    {
+        "word": "Mother-in-law",
+        "translation": "Suegra",
+        "example": "My mother-in-law is visiting.",
+        "ejemplo": "Mi suegra está de visita.",
+        "pronuntiation": "máder in ló",
+        "": ""
+    },
+    {
+        "word": "Brother-in-law",
+        "translation": "Cuñado",
+        "example": "My brother-in-law loves soccer.",
+        "ejemplo": "A mi cuñado le encanta el fútbol.",
+        "pronuntiation": "bróder in ló",
+        "": ""
+    },
+    {
+        "word": "Niece",
+        "translation": "Sobrina",
+        "example": "My niece just turned five.",
+        "ejemplo": "Mi sobrina acaba de cumplir cinco años.",
+        "pronuntiation": "nís",
+        "": ""
+    },
+    {
+        "word": "Nephew",
+        "translation": "Sobrino",
+        "example": "My nephew plays baseball.",
+        "ejemplo": "Mi sobrino juega béisbol.",
+        "pronuntiation": "néfiu",
+        "": ""
+    },
+    {
+        "word": "Shower",
+        "translation": "Ducha",
+        "example": "I’m going to take a shower.",
+        "ejemplo": "Voy a tomar una ducha.",
+        "pronuntiation": "sháuer",
+        "": ""
+    },
+    {
+        "word": "Single",
+        "translation": "Soltero/a",
+        "example": "He is single and happy.",
+        "ejemplo": "Él está soltero y feliz.",
+        "pronuntiation": "síngol",
+        "": ""
+    },
+    {
+        "word": "Engaged",
+        "translation": "Comprometido/a",
+        "example": "They got engaged last month.",
+        "ejemplo": "Se comprometieron el mes pasado.",
+        "pronuntiation": "enguéidcht",
+        "": ""
+    },
+    {
+        "word": "Separated",
+        "translation": "Separado/a",
+        "example": "They are separated but still friends.",
+        "ejemplo": "Están separados pero aún son amigos.",
+        "pronuntiation": "sépareited",
+        "": ""
+    },
+    {
+        "word": "Divorced",
+        "translation": "Divorciado/a",
+        "example": "My parents are divorced.",
+        "ejemplo": "Mis padres están divorciados.",
+        "pronuntiation": "divórst",
+        "": ""
+    },
+    {
+        "word": "Widowed",
+        "translation": "Viudo/a",
+        "example": "She’s been widowed for five years.",
+        "ejemplo": "Ella ha sido viuda por cinco años.",
+        "pronuntiation": "wídoud",
+        "": ""
+    },
+    {
+        "word": "Look alike",
+        "translation": "Parecerse",
+        "example": "They look alike a lot.",
+        "ejemplo": "Se parecen mucho.",
+        "pronuntiation": "luk aláik",
+        "": ""
+    },
+    {
+        "word": "Look different",
+        "translation": "Verse diferente",
+        "example": "The twins look different.",
+        "ejemplo": "Los gemelos se ven diferentes.",
+        "pronuntiation": "luk díferent",
+        "": ""
+    },
+    {
+        "word": "Entrées",
+        "translation": "Platos principales",
+        "example": "I ordered two entrées.",
+        "ejemplo": "Pedí dos platos principales.",
+        "pronuntiation": "ántréis",
+        "": ""
+    },
+    {
+        "word": "Appetizer",
+        "translation": "Aperitivo",
+        "example": "Would you like an appetizer?",
+        "ejemplo": "¿Te gustaría un aperitivo?",
+        "pronuntiation": "ápetaizer",
+        "": ""
+    },
+    {
+        "word": "Salads",
+        "translation": "Ensaladas",
+        "example": "We have fresh salads today.",
+        "ejemplo": "Tenemos ensaladas frescas hoy.",
+        "pronuntiation": "sálads",
+        "": ""
+    },
+    {
+        "word": "Desserts",
+        "translation": "Postres",
+        "example": "What desserts do you have?",
+        "ejemplo": "¿Qué postres tienen?",
+        "pronuntiation": "disérts",
+        "": ""
+    },
+    {
+        "word": "Beverages",
+        "translation": "Bebidas",
+        "example": "All beverages are included.",
+        "ejemplo": "Todas las bebidas están incluidas.",
+        "pronuntiation": "béveyes",
+        "": ""
+    },
+    {
+        "word": "Vegetables",
+        "translation": "Verduras",
+        "example": "She doesn’t like vegetables.",
+        "ejemplo": "A ella no le gustan las verduras.",
+        "pronuntiation": "véchetabols",
+        "": ""
+    },
+    {
+        "word": "Sparkling water",
+        "translation": "Agua con gas",
+        "example": "Do you want still or sparkling water?",
+        "ejemplo": "¿Quieres agua sin gas o con gas?",
+        "pronuntiation": "spárklin guáter",
+        "": ""
+    },
+    {
+        "word": "peppers",
+        "translation": "pimientos",
+        "example": "Do you like green peppers?",
+        "ejemplo": "¿Te gustan los pimientos verdes?",
+        "pronuntiation": "pépers",
+        "": ""
+    },
+    {
+        "word": "beef",
+        "translation": "carne de res",
+        "example": "I’ll cook beef for dinner.",
+        "ejemplo": "Voy a cocinar carne de res para la cena.",
+        "pronuntiation": "bíf",
+        "": ""
+    },
+    {
+        "word": "noodles",
+        "translation": "fideos",
+        "example": "She made chicken noodles.",
+        "ejemplo": "Ella preparó fideos con pollo.",
+        "pronuntiation": "núdols",
+        "": ""
+    },
+    {
+        "word": "butter",
+        "translation": "mantequilla",
+        "example": "Spread some butter on the toast.",
+        "ejemplo": "Unta un poco de mantequilla en la tostada.",
+        "pronuntiation": "báder",
+        "": ""
+    },
+    {
+        "word": "corn oil",
+        "translation": "aceite de maíz",
+        "example": "Corn oil is used for frying.",
+        "ejemplo": "Se usa aceite de maíz para freír.",
+        "pronuntiation": "kórn óil",
+        "": ""
+    },
+    {
+        "word": "olive oil",
+        "translation": "aceite de oliva",
+        "example": "Olive oil is healthier than corn oil.",
+        "ejemplo": "El aceite de oliva es más saludable que el de maíz.",
+        "pronuntiation": "óliv óil",
+        "": ""
+    },
+    {
+        "word": "coconut oil",
+        "translation": "aceite de coco",
+        "example": "Coconut oil smells good.",
+        "ejemplo": "El aceite de coco huele bien.",
+        "pronuntiation": "kóukonat óil",
+        "": ""
+    },
+    {
+        "word": "strange",
+        "translation": "raro",
+        "example": "extraño",
+        "ejemplo": "That’s a strange question.",
+        "pronuntiation": "Esa es una pregunta extraña.",
+        "": ""
+    },
+    {
+        "word": "spicy",
+        "translation": "picante",
+        "example": "I don't like spicy food.",
+        "ejemplo": "No me gusta la comida picante.",
+        "pronuntiation": "spáisi",
+        "": ""
+    },
+    {
+        "word": "main course",
+        "translation": "plato principal",
+        "example": "What did you have for your main course?",
+        "ejemplo": "¿Qué comiste de plato principal?",
+        "pronuntiation": "mein kors",
+        "": ""
+    },
+    {
+        "word": "costumer",
+        "translation": "cliente",
+        "example": "The customer is always right.",
+        "ejemplo": "El cliente siempre tiene la razón.",
+        "pronuntiation": "kástomer",
+        "": ""
+    },
+    {
+        "word": "tip",
+        "translation": "propina",
+        "example": "Leave a 10% tip.",
+        "ejemplo": "Deja una propina del 10%.",
+        "pronuntiation": "tip",
+        "": ""
+    },
+    {
+        "word": "bill / check",
+        "translation": "cuenta",
+        "example": "Can we get the check",
+        "ejemplo": "please?",
+        "pronuntiation": "¿Nos trae la cuenta",
+        "": ""
+    },
+    {
+        "word": "we'll take",
+        "translation": "tomaremos / quisiéramos",
+        "example": "We’ll take the chicken salad.",
+        "ejemplo": "Tomaremos la ensalada de pollo.",
+        "pronuntiation": "wíl teik",
+        "": ""
+    },
+    {
+        "word": "Any",
+        "translation": "Ninguna (+) / alguna (-)",
+        "example": "Do you have any milk?",
+        "ejemplo": "¿Tienes algo de leche?",
+        "pronuntiation": "éni",
+        "": ""
+    },
+    {
+        "word": "Some",
+        "translation": "Alguna (+) / alguna (-)",
+        "example": "We have some apples.",
+        "ejemplo": "Tenemos algunas manzanas.",
+        "pronuntiation": "som",
+        "": ""
+    },
+    {
+        "word": "secondment",
+        "translation": "traslado temporal (trabajo)",
+        "example": "He’s on a secondment in Germany.",
+        "ejemplo": "Está en un traslado temporal en Alemania.",
+        "pronuntiation": "sékondment",
+        "": ""
+    },
+    {
+        "word": "meals",
+        "translation": "comidas",
+        "example": "We eat three meals a day.",
+        "ejemplo": "Comemos tres comidas al día.",
+        "pronuntiation": "míils",
+        "": ""
+    },
+    {
+        "word": "instead",
+        "translation": "en lugar de",
+        "example": "Let’s watch a movie instead.",
+        "ejemplo": "Mejor veamos una película.",
+        "pronuntiation": "instéd",
+        "": ""
+    },
+    {
+        "word": "healthy",
+        "translation": "saludable",
+        "example": "This is a healthy snack.",
+        "ejemplo": "Este es un refrigerio saludable.",
+        "pronuntiation": "jélzi",
+        "": ""
+    },
+    {
+        "word": "unhealthy",
+        "translation": "no saludable",
+        "example": "Too much sugar is unhealthy.",
+        "ejemplo": "Demasiado azúcar no es saludable.",
+        "pronuntiation": "anjélzi",
+        "": ""
+    },
+    {
+        "word": "fatty / high-fat",
+        "translation": "graso / alto en grasa",
+        "example": "Burgers are fatty foods.",
+        "ejemplo": "Las hamburguesas son comidas grasosas.",
+        "pronuntiation": "fáti / jái fat",
+        "": ""
+    },
+    {
+        "word": "low-fat",
+        "translation": "bajo en grasa",
+        "example": "Low-fat yogurt is good.",
+        "ejemplo": "El yogur bajo en grasa es bueno.",
+        "pronuntiation": "lóu fat",
+        "": ""
+    },
+    {
+        "word": "salty",
+        "translation": "salado",
+        "example": "These chips are too salty.",
+        "ejemplo": "Estas papas están demasiado saladas.",
+        "pronuntiation": "sólti",
+        "": ""
+    },
+    {
+        "word": "sweet",
+        "translation": "dulce",
+        "example": "He likes sweet desserts.",
+        "ejemplo": "A él le gustan los postres dulces.",
+        "pronuntiation": "swít",
+        "": ""
+    },
+    {
+        "word": "high-calorie",
+        "translation": "alto en calorías",
+        "example": "Fast food is high-calorie.",
+        "ejemplo": "La comida rápida es alta en calorías.",
+        "pronuntiation": "jái kálori",
+        "": ""
+    },
+    {
+        "word": "low-calorie",
+        "translation": "bajo en calorías",
+        "example": "This soup is low-calorie.",
+        "ejemplo": "Esta sopa es baja en calorías.",
+        "pronuntiation": "lóu kálori",
+        "": ""
+    },
+    {
+        "word": "skip / avoid",
+        "translation": "saltar / evitar",
+        "example": "I skip breakfast. I avoid junk food.",
+        "ejemplo": "Me salto el desayuno. Evito la comida chatarra.",
+        "pronuntiation": "skip / evóid",
+        "": ""
+    },
+    {
+        "word": "portion",
+        "translation": "porción",
+        "example": "Eat a small portion.",
+        "ejemplo": "Come una porción pequeña.",
+        "pronuntiation": "pórshon",
+        "": ""
+    },
+    {
+        "word": "split / share",
+        "translation": "dividir / compartir",
+        "example": "Let’s split the bill. Let’s share a dessert.",
+        "ejemplo": "Dividamos la cuenta. Compartamos un postre.",
+        "pronuntiation": "split / sher",
+        "": ""
+    },
+    {
+        "word": "option",
+        "translation": "opción",
+        "example": "That’s a good option.",
+        "ejemplo": "Esa es una buena opción.",
+        "pronuntiation": "ópchon",
+        "": ""
+    },
+    {
+        "word": "That's a shame",
+        "translation": "Qué pena / qué lástima",
+        "example": "He lost his job. That’s a shame.",
+        "ejemplo": "Perdió su trabajo. Qué lástima.",
+        "pronuntiation": "dats a shéim",
+        "": ""
+    },
+    {
+        "word": "Piece of junk",
+        "translation": "basura / muy malo",
+        "example": "This phone is a piece of junk.",
+        "ejemplo": "Este teléfono es una basura.",
+        "pronuntiation": "pís of yonk",
+        "": ""
+    },
+    {
+        "word": "awful",
+        "translation": "horrible / terrible",
+        "example": "The food was awful.",
+        "ejemplo": "La comida estaba horrible.",
+        "pronuntiation": "ófool",
+        "": ""
+    },
+    {
+        "word": "a lemon",
+        "translation": "producto defectuoso",
+        "example": "My car is a lemon. It always breaks down.",
+        "ejemplo": "Mi carro es una basura. Siempre se daña.",
+        "pronuntiation": "a lémon",
+        "": ""
+    },
+    {
+        "word": "stove",
+        "translation": "estufa",
+        "example": "Put the pan on the stove.",
+        "ejemplo": "Pon la sartén en la estufa.",
+        "pronuntiation": "stóuv",
+        "": ""
+    },
+    {
+        "word": "oven",
+        "translation": "horno",
+        "example": "Bake it in the oven.",
+        "ejemplo": "Hornéalo en el horno.",
+        "pronuntiation": "óven",
+        "": ""
+    },
+    {
+        "word": "juicer",
+        "translation": "exprimidor",
+        "example": "Use the juicer for oranges.",
+        "ejemplo": "Usa el exprimidor para naranjas.",
+        "pronuntiation": "llúsar",
+        "": ""
+    },
+    {
+        "word": "food processor",
+        "translation": "procesador de alimentos",
+        "example": "The food processor saves time.",
+        "ejemplo": "El procesador de alimentos ahorra tiempo.",
+        "pronuntiation": "fúd prósesor",
+        "": ""
+    },
+    {
+        "word": "appliance",
+        "translation": "electrodoméstico",
+        "example": "This is a useful appliance.",
+        "ejemplo": "Este es un electrodoméstico útil.",
+        "pronuntiation": "apláiens",
+        "": ""
+    },
+    {
+        "word": "glad",
+        "translation": "contento / feliz",
+        "example": "I’m glad you came.",
+        "ejemplo": "Me alegra que vinieras.",
+        "pronuntiation": "glad",
+        "": ""
+    },
+    {
+        "word": "air conditioner",
+        "translation": "aire acondicionado",
+        "example": "Turn on the air conditioner.",
+        "ejemplo": "Enciende el aire acondicionado.",
+        "pronuntiation": "ér condíshoner",
+        "": ""
+    },
+    {
+        "word": "freezer",
+        "translation": "congelador",
+        "example": "Put the meat in the freezer.",
+        "ejemplo": "Pon la carne en el congelador.",
+        "pronuntiation": "frízer",
+        "": ""
+    },
+    {
+        "word": "fridge",
+        "translation": "nevera",
+        "example": "There’s milk in the fridge.",
+        "ejemplo": "Hay leche en la nevera.",
+        "pronuntiation": "frich",
+        "": ""
+    },
+    {
+        "word": "blender",
+        "translation": "licuadora",
+        "example": "Use the blender to make a smoothie.",
+        "ejemplo": "Usa la licuadora para hacer un batido.",
+        "pronuntiation": "blénder",
+        "": ""
+    },
+    {
+        "word": "pressure cooker",
+        "translation": "olla a presión",
+        "example": "A pressure cooker cooks fast.",
+        "ejemplo": "Una olla a presión cocina rápido.",
+        "pronuntiation": "préshur kúker",
+        "": ""
+    },
+    {
+        "word": "washing machine",
+        "translation": "lavadora",
+        "example": "The washing machine is broken.",
+        "ejemplo": "La lavadora está dañada.",
+        "pronuntiation": "wóshing mashín",
+        "": ""
+    },
+    {
+        "word": "dryer",
+        "translation": "secadora",
+        "example": "Put the clothes in the dryer.",
+        "ejemplo": "Pon la ropa en la secadora.",
+        "pronuntiation": "dráier",
+        "": ""
+    },
+    {
+        "word": "hair dryer",
+        "translation": "secador de pelo",
+        "example": "Use the hair dryer after showering.",
+        "ejemplo": "Usa el secador después de bañarte.",
+        "pronuntiation": "jér dráier",
+        "": ""
+    },
+    {
+        "word": "vacuum cleaner",
+        "translation": "aspiradora",
+        "example": "The vacuum cleaner is loud.",
+        "ejemplo": "La aspiradora es ruidosa.",
+        "pronuntiation": "vákium klíner",
+        "": ""
+    },
+    {
+        "word": "rice cooker",
+        "translation": "olla arrocera",
+        "example": "I love my rice cooker.",
+        "ejemplo": "Me encanta mi olla arrocera.",
+        "pronuntiation": "ráis kúker",
+        "": ""
+    },
+    {
+        "word": "kind",
+        "translation": "amable / tipo de",
+        "example": "She is very kind. What kind of music do you like?",
+        "ejemplo": "Ella es muy amable. ¿Qué tipo de música te gusta?",
+        "pronuntiation": "kaind",
+        "": ""
+    },
+    {
+        "word": "affordable",
+        "translation": "asequible",
+        "example": "That phone is affordable.",
+        "ejemplo": "Ese teléfono es asequible.",
+        "pronuntiation": "afórdabol",
+        "": ""
+    },
+    {
+        "word": "won't",
+        "translation": "no (futuro negativo)",
+        "example": "He won’t come. It won’t work. They won’t agree.",
+        "ejemplo": "Él no vendrá. No funcionará. Ellos no estarán de acuerdo.",
+        "pronuntiation": "wóunt",
+        "": ""
+    },
+    {
+        "word": "clogged",
+        "translation": "tapado / atascado",
+        "example": "The sink is clogged.",
+        "ejemplo": "El fregadero está tapado.",
+        "pronuntiation": "klógd",
+        "": ""
+    },
+    {
+        "word": "sink",
+        "translation": "fregadero / lavabo",
+        "example": "She cleaned the sink.",
+        "ejemplo": "Ella limpió el fregadero.",
+        "pronuntiation": "sínk",
+        "": ""
+    },
+    {
+        "word": "funny sound",
+        "translation": "sonido extraño",
+        "example": "The fridge makes a funny sound.",
+        "ejemplo": "La nevera hace un sonido extraño.",
+        "pronuntiation": "fóni saund",
+        "": ""
+    },
+    {
+        "word": "flush",
+        "translation": "tirar de la cadena",
+        "example": "Don’t forget to flush.",
+        "ejemplo": "No olvides tirar de la cadena.",
+        "pronuntiation": "flósh",
+        "": ""
+    },
+    {
+        "word": "couch potato",
+        "translation": "persona sedentaria",
+        "example": "My brother is a couch potato.",
+        "ejemplo": "Mi hermano es una persona sedentaria.",
+        "pronuntiation": "kauch potéitou",
+        "": ""
+    },
+    {
+        "word": "What are you up to?",
+        "translation": "¿Qué haces?",
+        "example": "Hey! What are you up to?",
+        "ejemplo": "¡Hey! ¿Qué haces?",
+        "pronuntiation": "guat ar iú ap tu?",
+        "": ""
+    },
+    {
+        "word": "out of shape",
+        "translation": "fuera de forma",
+        "example": "I'm out of shape lately.",
+        "ejemplo": "Últimamente estoy fuera de forma.",
+        "pronuntiation": "aut of sheip",
+        "": ""
+    },
+    {
+        "word": "crazy about",
+        "translation": "loco por",
+        "example": "She's crazy about pizza.",
+        "ejemplo": "Ella está loca por la pizza.",
+        "pronuntiation": "créizi abaut",
+        "": ""
+    },
+    {
+        "word": "on my way",
+        "translation": "en camino",
+        "example": "I'm on my way home.",
+        "ejemplo": "Estoy en camino a casa.",
+        "pronuntiation": "on mai güei",
+        "": ""
+    },
+    {
+        "word": "lif weights",
+        "translation": "levantar pesas",
+        "example": "He loves to lift weights.",
+        "ejemplo": "Le encanta levantar pesas.",
+        "pronuntiation": "lift güeits",
+        "": ""
+    },
+    {
+        "word": "have to",
+        "translation": "tener que",
+        "example": "I have to go now.",
+        "ejemplo": "Tengo que irme ahora.",
+        "pronuntiation": "jav tu",
+        "": ""
+    },
+    {
+        "word": "deaf people",
+        "translation": "personas sordas",
+        "example": "Deaf people use sign language.",
+        "ejemplo": "Las personas sordas usan lenguaje de señas.",
+        "pronuntiation": "def pípol",
+        "": ""
+    },
+    {
+        "word": "outside",
+        "translation": "afuera",
+        "example": "The kids are playing outside.",
+        "ejemplo": "Los niños están jugando afuera.",
+        "pronuntiation": "autsaid",
+        "": ""
+    },
+    {
+        "word": "lift",
+        "translation": "levantar",
+        "example": "Can you lift this box?",
+        "ejemplo": "¿Puedes levantar esta caja?",
+        "pronuntiation": "lift",
+        "": ""
+    },
+    {
+        "word": "weights",
+        "translation": "pesas",
+        "example": "He bought new weights.",
+        "ejemplo": "Compró pesas nuevas.",
+        "pronuntiation": "wueits",
+        "": ""
+    },
+    {
+        "word": "spend",
+        "translation": "gastar / pasar (tiempo)",
+        "example": "I like to spend time with family.",
+        "ejemplo": "Me gusta pasar tiempo con la familia.",
+        "pronuntiation": "spend",
+        "": ""
+    },
+    {
+        "word": "even",
+        "translation": "incluso / aún",
+        "example": "Even he was surprised.",
+        "ejemplo": "Incluso él estaba sorprendido.",
+        "pronuntiation": "íven",
+        "": ""
+    },
+    {
+        "word": "sat",
+        "translation": "se sentó",
+        "example": "She sat next to me.",
+        "ejemplo": "Ella se sentó a mi lado.",
+        "pronuntiation": "sat",
+        "": ""
+    },
+    {
+        "word": "heard",
+        "translation": "oyó / escuchó",
+        "example": "I heard a strange noise.",
+        "ejemplo": "Escuché un ruido extraño.",
+        "pronuntiation": "jerd",
+        "": ""
+    },
+    {
+        "word": "drive",
+        "translation": "conducir",
+        "example": "Can you drive a car?",
+        "ejemplo": "¿Puedes conducir un coche?",
+        "pronuntiation": "draiv",
+        "": ""
+    },
+    {
+        "word": "unscramble",
+        "translation": "ordenar / descifrar",
+        "example": "Unscramble the letters to make a word.",
+        "ejemplo": "Ordena las letras para formar una palabra.",
+        "pronuntiation": "anskrámbl",
+        "": ""
+    },
+    {
+        "word": "out wear",
+        "translation": "ropa exterior",
+        "example": "Jackets are part of out wear.",
+        "ejemplo": "Las chaquetas son parte de la ropa exterior.",
+        "pronuntiation": "aut güér",
+        "": ""
+    },
+    {
+        "word": "underwear",
+        "translation": "ropa interior",
+        "example": "I need to buy new underwear.",
+        "ejemplo": "Necesito comprar ropa interior.",
+        "pronuntiation": "ánder güér",
+        "": ""
+    },
+    {
+        "word": "lingerie",
+        "translation": "lencería",
+        "example": "She bought new lingerie.",
+        "ejemplo": "Ella compró nueva lencería.",
+        "pronuntiation": "loncheréi",
+        "": ""
+    },
+    {
+        "word": "hosiery",
+        "translation": "medias / calcetería",
+        "example": "The store sells hosiery.",
+        "ejemplo": "La tienda vende medias.",
+        "pronuntiation": "jóusheri",
+        "": ""
+    },
+    {
+        "word": "athletic wear",
+        "translation": "ropa deportiva",
+        "example": "He wears athletic wear to the gym.",
+        "ejemplo": "Él usa ropa deportiva para el gimnasio.",
+        "pronuntiation": "azlétic güér",
+        "": ""
+    },
+    {
+        "word": "sleepwear",
+        "translation": "ropa de dormir",
+        "example": "She packed her sleepwear.",
+        "ejemplo": "Ella empacó su ropa de dormir.",
+        "pronuntiation": "slíp güér",
+        "": ""
+    },
+    {
+        "word": "bags and accesories",
+        "translation": "bolsos y accesorios",
+        "example": "She collects bags and accessories.",
+        "ejemplo": "Ella colecciona bolsos y accesorios.",
+        "pronuntiation": "bags and aksésoris",
+        "": ""
+    },
+    {
+        "word": "wrap",
+        "translation": "envolver / cobija ligera",
+        "example": "Please wrap the gift.",
+        "ejemplo": "Por favor",
+        "pronuntiation": "envuelve el regalo.",
+        "": ""
+    },
+    {
+        "word": "brands",
+        "translation": "marcas",
+        "example": "We sell top brands.",
+        "ejemplo": "Vendemos marcas top.",
+        "pronuntiation": "brands",
+        "": ""
+    },
+    {
+        "word": "huge",
+        "translation": "enorme",
+        "example": "That house is huge!",
+        "ejemplo": "¡Esa casa es enorme!",
+        "pronuntiation": "hiúch",
+        "": ""
+    },
+    {
+        "word": "we should hurry",
+        "translation": "deberíamos apurarnos",
+        "example": "We should hurry or we’ll be late.",
+        "ejemplo": "Deberíamos apurarnos o llegaremos tarde.",
+        "pronuntiation": "wi shud jérry",
+        "": ""
+    },
+    {
+        "word": "catching a flight to Japan",
+        "translation": "tomando un vuelo a Japón",
+        "example": "I'm catching a flight to Japan tonight.",
+        "ejemplo": "Tomo un vuelo a Japón esta noche.",
+        "pronuntiation": "káching a flait tu yapán",
+        "": ""
+    },
+    {
+        "word": "what a small world",
+        "translation": "¡qué pequeño es el mundo!",
+        "example": "You know her too? What a small world!",
+        "ejemplo": "¿Tú también la conoces? ¡Qué pequeño es el mundo!",
+        "pronuntiation": "juat a smól wérld",
+        "": ""
+    },
+    {
+        "word": "a one way ticket",
+        "translation": "boleto de ida",
+        "example": "I bought a one way ticket.",
+        "ejemplo": "Compré un boleto de ida.",
+        "pronuntiation": "a uan güei tíket",
+        "": ""
+    },
+    {
+        "word": "a round trip tickets",
+        "translation": "boletos de ida y vuelta",
+        "example": "We bought round trip tickets.",
+        "ejemplo": "Compramos boletos de ida y vuelta.",
+        "pronuntiation": "a raund trip tíkets",
+        "": ""
+    },
+    {
+        "word": "a direct flight",
+        "translation": "vuelo directo",
+        "example": "We booked a direct flight.",
+        "ejemplo": "Reservamos un vuelo directo.",
+        "pronuntiation": "a dáirect flait",
+        "": ""
+    },
+    {
+        "word": "a non stop flight",
+        "translation": "vuelo sin escalas",
+        "example": "It's a non stop flight to Madrid.",
+        "ejemplo": "Es un vuelo sin escalas a Madrid.",
+        "pronuntiation": "a non stop flait",
+        "": ""
+    },
+    {
+        "word": "an aisle seat",
+        "translation": "asiento de pasillo",
+        "example": "I prefer an aisle seat.",
+        "ejemplo": "Prefiero un asiento de pasillo.",
+        "pronuntiation": "an ail sít",
+        "": ""
+    },
+    {
+        "word": "an window seat",
+        "translation": "asiento de ventana",
+        "example": "She chose a window seat.",
+        "ejemplo": "Eligió un asiento de ventana.",
+        "pronuntiation": "an güíndou sít",
+        "": ""
+    },
+    {
+        "word": "advice",
+        "translation": "consejo",
+        "example": "He gave me good advice.",
+        "ejemplo": "Me dio un buen consejo.",
+        "pronuntiation": "adváis",
+        "": ""
+    },
+    {
+        "word": "strony suggestion",
+        "translation": "sugerencia fuerte",
+        "example": "That was a strong suggestion.",
+        "ejemplo": "Esa fue una sugerencia fuerte.",
+        "pronuntiation": "stróng suyéschon",
+        "": ""
+    },
+    {
+        "word": "weak suggestion",
+        "translation": "sugerencia débil",
+        "example": "He made a weak suggestion.",
+        "ejemplo": "Hizo una sugerencia débil.",
+        "pronuntiation": "uíik suyéschon",
+        "": ""
+    },
+    {
+        "word": "depart",
+        "translation": "partir / salir",
+        "example": "We depart at 9 AM.",
+        "ejemplo": "Salimos a las 9 AM.",
+        "pronuntiation": "dipárt",
+        "": ""
+    },
+    {
+        "word": "arrive",
+        "translation": "llegar",
+        "example": "We arrive at noon.",
+        "ejemplo": "Llegamos al mediodía.",
+        "pronuntiation": "arráiv",
+        "": ""
+    },
+    {
+        "word": "take off",
+        "translation": "despegar",
+        "example": "The plane will take off soon.",
+        "ejemplo": "El avión despegará pronto.",
+        "pronuntiation": "teik of",
+        "": ""
+    },
+    {
+        "word": "go throught security",
+        "translation": "pasar por seguridad",
+        "example": "We must go through security first.",
+        "ejemplo": "Debemos pasar por seguridad primero.",
+        "pronuntiation": "gou zru sécuriti",
+        "": ""
+    },
+    {
+        "word": "boarding pass",
+        "translation": "pase de abordar",
+        "example": "Here's your boarding pass.",
+        "ejemplo": "Aquí está tu pase de abordar.",
+        "pronuntiation": "bórding pas",
+        "": ""
+    },
+    {
+        "word": "the gate",
+        "translation": "la puerta (de embarque)",
+        "example": "Go to the gate 5.",
+        "ejemplo": "Ve a la puerta 5.",
+        "pronuntiation": "de gueit",
+        "": ""
+    },
+    {
+        "word": "overbooked",
+        "translation": "sobrevendido",
+        "example": "The flight was overbooked.",
+        "ejemplo": "El vuelo estaba sobrevendido.",
+        "pronuntiation": "óuverbúkt",
+        "": ""
+    },
+    {
+        "word": "delayed",
+        "translation": "retrasado",
+        "example": "Our flight is delayed.",
+        "ejemplo": "Nuestro vuelo está retrasado.",
+        "pronuntiation": "diléid",
+        "": ""
+    },
+    {
+        "word": "departure lounge",
+        "translation": "sala de espera",
+        "example": "We waited in the departure lounge.",
+        "ejemplo": "Esperamos en la sala de espera.",
+        "pronuntiation": "dipárchur launch",
+        "": ""
+    },
+    {
+        "word": "carsick",
+        "translation": "mareado en carro",
+        "example": "I get carsick easily.",
+        "ejemplo": "Me mareo fácilmente en el carro.",
+        "pronuntiation": "kársik",
+        "": ""
+    },
+    {
+        "word": "airsick",
+        "translation": "mareado en avión",
+        "example": "She felt airsick.",
+        "ejemplo": "Ella se sintió mareada en el avión.",
+        "pronuntiation": "érsik",
+        "": ""
+    },
+    {
+        "word": "seasick",
+        "translation": "mareado en el mar",
+        "example": "He was seasick on the boat.",
+        "ejemplo": "Él estaba mareado en el bote.",
+        "pronuntiation": "sísik",
+        "": ""
+    },
+    {
+        "word": "blames",
+        "translation": "culpa",
+        "example": "He blames me for everything.",
+        "ejemplo": "Él me culpa de todo.",
+        "pronuntiation": "bleims",
+        "": ""
+    },
+    {
+        "word": "missed our train",
+        "translation": "perdimos nuestro tren",
+        "example": "We missed our train this morning.",
+        "ejemplo": "Perdimos nuestro tren esta mañana.",
+        "pronuntiation": "mist aur trein",
+        "": ""
+    },
+    {
+        "word": "got bumbed",
+        "translation": "nos bajaron del vuelo",
+        "example": "We got bumped from our flight.",
+        "ejemplo": "Nos bajaron del vuelo.",
+        "pronuntiation": "gat bómpt",
+        "": ""
+    },
+    {
+        "word": "stuck on the track",
+        "translation": "atrapado en la vía",
+        "example": "The train was stuck on the track.",
+        "ejemplo": "El tren quedó atrapado en la vía.",
+        "pronuntiation": "stak on de trak",
+        "": ""
+    },
+    {
+        "word": "abandon",
+        "translation": "abandonar",
+        "example": "They had to abandon the car.",
+        "ejemplo": "Tuvieron que abandonar el carro.",
+        "pronuntiation": "abándon",
+        "": ""
+    },
+    {
+        "word": "aisle seat",
+        "translation": "asiento de pasillo",
+        "example": "I like the aisle seat.",
+        "ejemplo": "Me gusta el asiento de pasillo.",
+        "pronuntiation": "ail sít",
+        "": ""
+    },
+    {
+        "word": "window seat",
+        "translation": "asiento de ventana",
+        "example": "The window seat is taken.",
+        "ejemplo": "El asiento de ventana está ocupado.",
+        "pronuntiation": "güíndou sít",
+        "": ""
+    },
+    {
+        "word": "the least",
+        "translation": "el menos",
+        "example": "That's the least I can do.",
+        "ejemplo": "Es lo menos que puedo hacer.",
+        "pronuntiation": "de líst",
+        "": ""
+    },
+    {
+        "word": "the best",
+        "translation": "el mejor",
+        "example": "She is the best student.",
+        "ejemplo": "Ella es la mejor estudiante.",
+        "pronuntiation": "de bést",
+        "": ""
+    },
+    {
+        "word": "far",
+        "translation": "lejos",
+        "example": "The hotel is far from here.",
+        "ejemplo": "El hotel está lejos de aquí.",
+        "pronuntiation": "far",
+        "": ""
+    },
+    {
+        "word": "defective",
+        "translation": "defectuoso",
+        "example": "This phone is defective.",
+        "ejemplo": "Este teléfono está defectuoso.",
+        "pronuntiation": "diféctiv",
+        "": ""
+    },
+    {
+        "word": "scenic",
+        "translation": "escénico / pintoresco",
+        "example": "We took a scenic route.",
+        "ejemplo": "Tomamos una ruta escénica.",
+        "pronuntiation": "sínik",
+        "": ""
+    }
+]

@@ -22,7 +22,7 @@ class UnsplashService
     public function fetchImages($query, $perPage = 1)
     {
         $accessKey = config('services.unsplash.key');
-        Log::info("Searching Unsplash for query: $query");
+        // Log::info("Searching Unsplash for query: $query");
         $response = Http::withOptions(['verify' => false])->get('https://api.unsplash.com/search/photos', [
             'query' => $query,
             'per_page' => $perPage,

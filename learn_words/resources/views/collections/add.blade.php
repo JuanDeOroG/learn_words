@@ -18,9 +18,9 @@
             <div class="col-md-6 mb-2">
                 <input type="text" name="word" id="wordInput" class="form-control" placeholder="Word" required>
             </div>
-            {{-- <div class="col-md-4 mb-2">
+            <div class="col-md-4 mb-2">
                 <input type="text" name="translation" id="translationInput" class="form-control" placeholder="Translation">
-            </div> --}}
+            </div>
             <div class="col-md-6 mb-2">
                 <input type="hidden" name="image_url" id="imageUrlInput">
                 <button type="button" class="btn btn-dark w-100" id="searchImageBtn">Search Image</button>
@@ -40,7 +40,7 @@
                             <div class="w-100 d-flex justify-content-between align-items-center">
                                 <div>
                                     <strong>{{ $word->word }}</strong>
-                                    {{-- <small class="text-muted ms-2">{{ $word->translation }}</small> --}}
+                                    <small class="text-muted ms-2">{{ $word->translation }}</small>
                                 </div>
                                 <div class="d-flex" style="gap:4px;">
                                     <button class="btn btn-sm btn-outline-secondary" onclick="editWord({{ $word->id }})">Edit</button>
@@ -99,6 +99,7 @@ document.getElementById('addWordForm').onsubmit = function(e) {
     e.preventDefault();
     const data = {
         word: document.getElementById('wordInput').value,
+        translation: document.getElementById('translationInput').value,
         image_url: document.getElementById('imageUrlInput').value,
         collection_id: {{ $collection->id }}
     };
@@ -121,17 +122,20 @@ document.getElementById('addWordForm').onsubmit = function(e) {
 
 function editWord(wordId) {
     const wordText = document.querySelector(`[onclick="editWord(${wordId})"]`).closest('.w-100').querySelector('strong').textContent.trim();
+    const translationText = document.querySelector(`[onclick="editWord(${wordId})"]`).closest('.list-group-item').querySelector('small').textContent.trim();
 
     Swal.fire({
         title: 'Edit Word',
         html: `
             <input id="editWordInput" class="form-control mb-2" placeholder="Word" value="${wordText}">
+            <input id="editTranslationInput" class="form-control mb-2" placeholder="Translation" value="${translationText}">
         `,
         showCancelButton: true,
         confirmButtonText: 'Save',
         preConfirm: () => {
             return {
-                word: document.getElementById('editWordInput').value
+                word: document.getElementById('editWordInput').value,
+                translation: document.getElementById('editTranslationInput').value
             }
         }
     }).then(result => {
@@ -146,6 +150,7 @@ function editWord(wordId) {
                 body: JSON.stringify({
                     word_id: wordId,
                     word: result.value.word,
+                    translation: result.value.translation,
                     update_word: true
                 })
             })
