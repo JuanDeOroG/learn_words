@@ -11,6 +11,7 @@ class Word extends Model
 
     protected $fillable = [
         'word',
+        'translation',
         'conjugation_id',
         'group_key',
         'image_url',

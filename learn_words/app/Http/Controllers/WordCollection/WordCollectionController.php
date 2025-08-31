@@ -67,7 +67,8 @@ class WordCollectionController extends Controller
             $success = $service->updateWord(
                 $request->input('word_id'),
                 $request->input('word'),
-                $request->input('translation')
+                $request->input('translation'),
+                $request->input('image_url')
             );
             return response()->json(['success' => $success]);
         }

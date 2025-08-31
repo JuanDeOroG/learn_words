@@ -10,10 +10,9 @@
 </div>
 
 @section('scripts')
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
 
-        @if ($mode === 'flashcard')
             const words = @json($words);
             let current = 0;
             let studied = Array(words.length).fill(false);
@@ -26,7 +25,9 @@
                             "Content-Type": "application/json",
                             "X-CSRF-TOKEN": "{{ csrf_token() }}"
                         },
-                        body: JSON.stringify({ word_id: wordId })
+                        body: JSON.stringify({
+                            word_id: wordId
+                        })
                     });
                 } catch (error) {
                     console.error("Error incrementing study count:", error);
@@ -89,7 +90,6 @@
             };
 
             renderWord(current);
-        @endif
-    });
-</script>
+        });
+    </script>
 @endsection

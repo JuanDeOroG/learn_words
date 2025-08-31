@@ -2,6 +2,7 @@
 @extends('layouts.app', ['hideHeader' => true])
 
 @section('head')
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         .wrapper {
             width: 80%;
@@ -43,7 +44,7 @@
                                     <small class="text-muted ms-2">{{ $word->translation }}</small>
                                 </div>
                                 <div class="d-flex" style="gap:4px;">
-                                    <button class="btn btn-sm btn-outline-secondary" onclick="editWord({{ $word->id }})">Edit</button>
+                                    <button class="btn btn-sm btn-outline-secondary" onclick="editWord({{ $word->id }}, this)">Edit</button>
                                     <button class="btn btn-sm btn-outline-danger" onclick="removeWord({{ $word->id }})">Remove</button>
                                 </div>
                             </div>
@@ -57,43 +58,14 @@
         </div>
     </div>
 </div>
+@include('components.wordcollection.edit-word-modal')
+
 @endsection
 
 @section('scripts')
 <script>
-document.getElementById('searchImageBtn').onclick = function() {
-    const query = document.getElementById('wordInput').value;
-    if (!query) return;
-    fetch("{{ route('searchImage') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-Requested-With": "XMLHttpRequest",
-            "X-CSRF-TOKEN": "{{ csrf_token() }}"
-        },
-        body: JSON.stringify({ query: query, perPage: 15 })
-    })
-    .then(res => res.json())
-    .then(data => {
-        let html = '<div class="d-flex flex-wrap justify-content-start" style="gap:10px;">';
-        // data.images debe ser un array de URLs
-        data.images.forEach(url => {
-            html += `
-                <div style="width:120px; height:120px; display:flex; align-items:center; justify-content:center; border-radius:8px; overflow:hidden; background:#f8f9fa;">
-                    <img src="${url}" class="img-thumbnail select-image" style="width:120px; height:120px; object-fit:cover; cursor:pointer;" onclick="selectImage('${url}')">
-                </div>
-            `;
-        });
-        html += '</div>';
-        document.getElementById('imageResults').innerHTML = html;
-    });
-};
-
-function selectImage(url) {
-    document.getElementById('imageUrlInput').value = url;
-    document.querySelectorAll('.select-image').forEach(img => img.classList.remove('border-success'));
-    document.querySelectorAll(`img[src="${url}"]`).forEach(img => img.classList.add('border-success'));
-}
+window.searchImageUrl = "{{ route('searchImage') }}";
+wordCollectionEditUrl = "{{ route('wordCollection.edit') }}";
 
 document.getElementById('addWordForm').onsubmit = function(e) {
     e.preventDefault();
@@ -112,78 +84,86 @@ document.getElementById('addWordForm').onsubmit = function(e) {
         },
         body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(result => {
-        if (result.success) {
-            location.reload();
+    .then(async res => {
+        if (res.ok) {
+            const result = await res.json();
+            if (result.success) {
+                location.reload();
+            }
+        } else if (res.status === 422) {
+            const error = await res.json();
+            let messages = '';
+            Object.values(error.errors).forEach(arr => {
+                messages += arr.join('<br>');
+            });
+            Swal.fire('Validation error', messages, 'error');
         }
     });
 }
 
-function editWord(wordId) {
-    const wordText = document.querySelector(`[onclick="editWord(${wordId})"]`).closest('.w-100').querySelector('strong').textContent.trim();
-    const translationText = document.querySelector(`[onclick="editWord(${wordId})"]`).closest('.list-group-item').querySelector('small').textContent.trim();
-
+function removeWord(wordId) {
     Swal.fire({
-        title: 'Edit Word',
-        html: `
-            <input id="editWordInput" class="form-control mb-2" placeholder="Word" value="${wordText}">
-            <input id="editTranslationInput" class="form-control mb-2" placeholder="Translation" value="${translationText}">
-        `,
+        title: 'Are you sure?',
+        text: 'This word will be removed from the collection.',
+        icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: 'Save',
-        preConfirm: () => {
-            return {
-                word: document.getElementById('editWordInput').value,
-                translation: document.getElementById('editTranslationInput').value
-            }
-        }
-    }).then(result => {
+        confirmButtonText: 'Yes, remove it',
+        cancelButtonText: 'Cancel'
+    }).then((result) => {
         if (result.isConfirmed) {
             fetch("{{ route('wordCollection.edit') }}", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "X-CSRF-TOKEN": "{{ csrf_token() }}",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
                     "X-Requested-With": "XMLHttpRequest"
                 },
                 body: JSON.stringify({
-                    word_id: wordId,
-                    word: result.value.word,
-                    translation: result.value.translation,
-                    update_word: true
+                    collection_id: {{ $collection->id }},
+                    remove_word_id: wordId
                 })
             })
             .then(res => res.json())
             .then(data => {
                 if (data.success) {
-                    location.reload();
+                    Swal.fire('Removed!', 'The word has been removed.', 'success').then(() => {
+                        location.reload();
+                    });
                 }
             });
         }
     });
 }
 
-function removeWord(wordId) {
-    if (!confirm('Are you sure you want to remove this word?')) return;
-    fetch("{{ route('wordCollection.edit') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-TOKEN": "{{ csrf_token() }}",
-            "X-Requested-With": "XMLHttpRequest"
-        },
-        body: JSON.stringify({
-            collection_id: {{ $collection->id }},
-            remove_word_id: wordId
+document.getElementById('searchImageBtn').onclick = function() {
+        const query = document.getElementById('wordInput').value;
+        if (!query) return;
+        fetch(window.searchImageUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({ query: query, perPage: 15 })
         })
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            location.reload();
-        }
-    });
-}
+        .then(res => res.json())
+        .then(data => {
+            let html = '<div class="d-flex flex-wrap justify-content-start" style="gap:10px;">';
+            // data.images debe ser un array de URLs
+            data.images.forEach(url => {
+                html += `
+                    <div style="width:120px; height:120px; display:flex; align-items:center; justify-content:center; border-radius:8px; overflow:hidden; background:#f8f9fa;">
+                        <img src="${url}" class="img-thumbnail select-image" style="width:120px; height:120px; object-fit:cover; cursor:pointer;" onclick="selectImage('${url}')">
+                    </div>
+                `;
+            });
+            html += '</div>';
+            document.getElementById('imageResults').innerHTML = html;
+        });
+    };
+
 </script>
+<script src="{{ asset('js/edit-searchimg.js') }}"></script>
+
 @endsection

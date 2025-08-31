@@ -58,12 +58,13 @@ class EditCollectionService
     }
 
     // Editar palabra
-    public function updateWord($wordId, $word, $translation)
+    public function updateWord($wordId, $word, $translation, $imageUrl)
     {
         $w = Word::find($wordId);
         if ($w) {
             $w->word = $word;
             $w->translation = $translation;
+            $w->image_url = $imageUrl;
             $w->save();
             return true;
         }

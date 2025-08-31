@@ -2,6 +2,7 @@
 @extends('layouts.app', ['hideHeader' => true])
 
 @section('head')
+<meta name="csrf-token" content="{{ csrf_token() }}">
     <style>
         .wrapper {
             width: 90%;
@@ -31,10 +32,13 @@
         </div>
     </div>
 </div>
+@include('components.wordcollection.edit-word-modal')
 @endsection
 
 @section('scripts')
 <script>
+window.searchImageUrl = "{{ route('searchImage') }}";
+wordCollectionEditUrl = "{{ route('wordCollection.edit') }}";
 let currentPage = 1;
 let currentQuery = '';
 let selectedCollectionId = null;
@@ -134,7 +138,7 @@ function selectCollection(collectionId) {
         let wordsHtml = `
             <div class="card" style="width:100%; height:55vh; min-height:200px; overflow-y:auto;">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <strong>Words in this collection (${data.words.length})</strong>
+                    <span>Words in this collection (${data.words.length})</span>
                     <div class="d-flex" style="gap: 8px;">
                         <a href="{{ route('wordCollection.add') }}?collection_id=${data.collection.id}" class="btn btn-dark btn-sm" id="addWordBtn">Add Word</a>
                         <button type="button" class="btn btn-warning btn-sm" id="importWordBtn">Import</button>
@@ -151,7 +155,7 @@ function selectCollection(collectionId) {
                     </span>
                     <div>
                         <button class="btn btn-sm btn-outline-danger me-2" onclick="removeWord(${word.id})">Remove</button>
-                        <button class="btn btn-sm btn-outline-secondary" onclick="editWord(${word.id})">Edit</button>
+                        <button class="btn btn-sm btn-outline-secondary" onclick="editWord(${word.id}, this)">Edit</button>
                     </div>
                 </li>
             `;
@@ -163,80 +167,42 @@ function selectCollection(collectionId) {
 
 // Quitar palabra de la colección
 function removeWord(wordId) {
-    fetch("{{ route('wordCollection.edit') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-TOKEN": "{{ csrf_token() }}",
-            "X-Requested-With": "XMLHttpRequest"
-        },
-        body: JSON.stringify({ collection_id: selectedCollectionId, remove_word_id: wordId })
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            selectCollection(selectedCollectionId);
+    Swal.fire({
+        title: 'Are you sure?',
+        text: 'This word will be removed from the collection.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, remove it',
+        cancelButtonText: 'Cancel'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            fetch("{{ route('wordCollection.edit') }}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                    "X-Requested-With": "XMLHttpRequest"
+                },
+                body: JSON.stringify({
+                    collection_id: selectedCollectionId,
+                    remove_word_id: wordId
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    selectCollection(selectedCollectionId);
+                    Swal.fire('Removed!', 'The word has been removed.', 'success');
+                }
+            });
         }
     });
 }
 
-// Editar palabra (modal simple)
-function editWord(wordId) {
-    fetch("{{ route('wordCollection.edit') }}", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "X-CSRF-TOKEN": "{{ csrf_token() }}",
-            "X-Requested-With": "XMLHttpRequest"
-        },
-        body: JSON.stringify({ word_id: wordId, collection_id: selectedCollectionId, get_word: true })
-    })
-    .then(res => res.json())
-    .then(data => {
-        Swal.fire({
-            title: 'Edit Word',
-            html: `
-                <input id="editWordInput" class="form-control mb-2" value="${data.word.word}">
-                <input id="editTranslationInput" class="form-control" value="${data.word.translation ?? ''}" placeholder="Translation">
-            `,
-            showCancelButton: true,
-            confirmButtonText: 'Save',
-            preConfirm: () => {
-                return {
-                    word: document.getElementById('editWordInput').value,
-                    translation: document.getElementById('editTranslationInput').value
-                }
-            }
-        }).then(result => {
-            if (result.isConfirmed) {
-                fetch("{{ route('wordCollection.edit') }}", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "X-CSRF-TOKEN": "{{ csrf_token() }}",
-                        "X-Requested-With": "XMLHttpRequest"
-                    },
-                    body: JSON.stringify({
-                        word_id: wordId,
-                        collection_id: selectedCollectionId,
-                        update_word: true,
-                        word: result.value.word,
-                        translation: result.value.translation
-                    })
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.success) {
-                        selectCollection(selectedCollectionId);
-                        Swal.fire('Saved!', '', 'success');
-                    }
-                });
-            }
-        });
-    });
-}
 
 // Carga inicial
 loadCollections();
 </script>
+
+<script src="{{ asset('js/edit-searchimg.js') }}"></script>
 @endsection
