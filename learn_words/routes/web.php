@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EvaluateConjugations\EvaluateConjugationController;
+use App\Http\Controllers\EvaluateFill\EvaluateFillController;
 use App\Http\Controllers\Study\StudyController;
 use App\Http\Controllers\WordCollection\WordCollectionController;
 use App\Models\Collection;
@@ -28,6 +29,18 @@ Route::prefix('evaluate')->group(function () {
         // Route::get('order', [App\Http\Controllers\EvaluationController::class, 'order'])->name('evaluate.order');
         // Route::get('choice', [App\Http\Controllers\EvaluationController::class, 'choice'])->name('evaluate.choice');
     });
+
+    Route::prefix('/fill')->group(function () {
+        
+        Route::get('/', function () {
+            return view('evaluate.fill.index', ['collections' => Collection::all()]);
+        })->name('evaluate.fill.index');
+
+        Route::get('/session', [EvaluateFillController::class, 'session'])->name('evaluate.fill.session');
+
+        Route::post('/store', [EvaluateFillController::class, 'store'])->name('evaluate.fill.store'); // <-- Nueva ruta para guardar evaluación
+
+    });
 });
 
 Route::prefix('study')->group(function () {
@@ -40,11 +53,11 @@ Route::prefix('study')->group(function () {
 });
 
 Route::prefix('wordCollection')->group(function () {
-    
+
     Route::get('/', function () {
         return view('collections.index');
     })->name('wordCollection.index');
-    
+
     Route::post('/store', [WordCollectionController::class, 'store'])->name('wordCollection.store');
 
     Route::get('/edit', function () {
@@ -63,7 +76,7 @@ Route::prefix('wordCollection')->group(function () {
         return view('collections.import');
     })->name('collections.import');
 
-    
+
 
     Route::get('/stats', function () {
         return view('collections.stats', [

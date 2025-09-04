@@ -27,6 +27,17 @@
         <h2>Selección múltiple</h2>
         <p>Elige la forma correcta entre varias opciones.</p>
     </div>
+    <div class="card eval-card" onclick="location.href='{{ route('evaluate.fill.index') }}'">
+        <div class="eval-icon">
+            <!-- Icono de rellenar (puedes cambiar el SVG si lo deseas) -->
+            <svg width="40" height="40" fill="none" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" fill="#2196F3"/>
+                <text x="12" y="16" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" dy=".3em">Fill</text>
+            </svg>
+        </div>
+        <h2>Fill Evaluation</h2>
+        <p>Evalúa completando con imagen, audio o ejemplo.</p>
+    </div>
 
     @include('components.evaluate.conjugations.modal-config')
 
